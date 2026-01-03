@@ -1,0 +1,58 @@
+theme: ''
+controlStyles:
+  - target: AppBarSeparator
+    styles:
+      - Visibility=Collapsed
+  - target: Grid#DetailsViewControlRootGrid
+    styles:
+      - Background=Transparent
+  - target: StackPanel#DetailsViewThumbnail
+    styles:
+      - Background=Transparent
+  - target: Grid#CommandBarControlRootGrid
+    styles:
+      - Background=Transparent
+      - BorderThickness=0
+  - target: FileExplorerExtensions.GalleryViewControl#GalleryViewControl > Grid
+    styles:
+      - Background=Transparent
+  - target: FileExplorerExtensions.GalleryViewControl#GalleryViewControl > Grid > Grid#GalleryRootGrid
+    styles:
+      - Background=Transparent
+  - target: Grid#NavigationBarControlGrid
+    styles:
+      - Background=Transparent
+  - target: CommandBar#FileExplorerCommandBar
+    styles:
+      - Background=Transparent
+  - target: Border#RightBottomBorderLine
+    styles:
+      - Visibility=Collapsed
+  - target: Border#LeftBottomBorderLine
+    styles:
+      - Visibility=Collapsed
+  - target: Border#BottomBorderLine
+    styles:
+      - Visibility=Collapsed
+  - target: TabViewItem > Grid#LayoutRoot > Grid#TabContainer
+    styles:
+      - BorderBrush=Transparent
+      - Background=Transparent
+  - target: Grid#HomeViewRootGrid
+    styles:
+      - Background=Transparent
+  - target: TabViewItem > Grid#LayoutRoot > Canvas > Microsoft.UI.Xaml.Shapes.Path#SelectedBackgroundPath
+    styles:
+      - Fill:=Transparent
+  - target: Microsoft.UI.Xaml.Controls.Grid#PART_LayoutRoot
+    styles:
+      - CornerRadius=15
+  - target: Microsoft.UI.Xaml.Controls.AutoSuggestBox#SearchEducationFileExplorerSearchBox
+    styles:
+      - CornerRadius=15
+styleConstants:
+  - ''
+resourceVariables:
+  - variableKey: ''
+    value: ''
+explorerFrameContainerHeight: 0
