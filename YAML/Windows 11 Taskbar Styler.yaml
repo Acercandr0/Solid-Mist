@@ -1,0 +1,128 @@
+theme: ''
+controlStyles:
+  - target: Taskbar.TaskListLabeledButtonPanel#IconPanel > Border
+    styles:
+      - Margin=0
+      - Padding=0
+      - BorderThickness=0
+      - Background:=Transparent
+  - target: Taskbar.TaskListButton#TaskListButton > Taskbar.TaskListLabeledButtonPanel#IconPanel > Border#MultiWindowElement
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskListLabeledButtonPanel@RunningIndicatorStates > Rectangle#RunningIndicator
+    styles:
+      - Width@ActiveRunningIndicator=25
+      - Height=2.5
+      - Width@InactiveRunningIndicator=2.5
+      - Margin=0,0,0,-1
+      - Fill:=<SolidColorBrush Color="{ThemeResource SystemAccentColor}" Opacity="1" />
+      - Fill@InactiveRunningIndicator:=<SolidColorBrush Color="{ThemeResource SystemBaseHighColor}" Opacity="0.5"/>
+      - MaxWidth=25
+  - target: Windows.UI.Xaml.Shapes.Rectangle#ProgressBarTrack
+    styles:
+      - Fill:=<SolidColorBrush Color="{ThemeResource SystemAccentColor}" Opacity="0.6" />
+      - Margin=0
+  - target: Microsoft.UI.Xaml.Controls.ProgressBar#ProgressIndicator
+    styles:
+      - Width=25
+      - Margin=0,0,0,-1
+      - MinHeight=2.5
+      - BorderThickness=0
+  - target: Grid#RootGrid > Taskbar.TaskbarBackground > Grid
+    styles:
+      - BorderThickness=0
+      - Margin=0
+  - target: Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundFill
+    styles:
+      - Fill:=$bg
+  - target: Image#OverlayIcon
+    styles:
+      - RenderTransform:=<ScaleTransform ScaleX="0.8" ScaleY="0.8" />
+      - Margin=10,-3,0,0
+      - Canvas.ZIndex=1
+      - RenderTransformOrigin:=0.5,0.5
+  - target: Taskbar.Badge#BadgeControl
+    styles:
+      - RenderTransform:=<ScaleTransform ScaleX="0.8" ScaleY="0.8" />
+      - Margin=10,-3,0,0
+      - Canvas.ZIndex=1
+      - RenderTransformOrigin:=0.5,0.5
+  - target: MenuFlyoutPresenter > Border
+    styles:
+      - Background:=$bg
+      - Shadow:=
+      - BorderThickness=1
+      - BorderBrush:=$border
+  - target: MenuFlyoutPresenter
+    styles:
+      - Shadow:=
+  - target: Border#OverflowFlyoutBackgroundBorder
+    styles:
+      - Background:=$bg
+      - Shadow:=
+      - BorderThickness=1
+      - BorderBrush:=$border
+  - target: Rectangle#BackgroundStroke
+    styles:
+      - Height=1
+      - Opacity=0.3
+  - target: Grid#ModalRootGrid > Border#BackgroundElement
+    styles:
+      - Background:=$bg
+  - target: Windows.UI.Xaml.Controls.Border#HoverFlyoutBackground
+    styles:
+      - Shadow:=
+      - BorderThickness=1
+      - Background:=$bg
+      - BorderBrush:=$border
+  - target: Windows.UI.Xaml.Controls.Border#HoverFlyoutBackground > Taskbar.TaskbarBackground#HoverFlyoutBackgroundControl > Windows.UI.Xaml.Controls.Grid > Windows.UI.Xaml.Shapes.Rectangle#BackgroundFill
+    styles:
+      - Fill:=Transparent
+  - target: Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter#LayoutRoot
+    styles:
+      - BorderBrush:=$border
+      - Shadow:=
+      - Background:=$bgx
+  - target: Windows.UI.Xaml.Controls.Border#BackgroundDimmingLayer
+    styles:
+      - Background:=$bg2
+  - target: Border#SnapBarBorder
+    styles:
+      - Background:=$bg2
+      - Shadow:=
+      - BorderThickness=1
+      - BorderBrush:=$border
+  - target: Border#SnapPickerBorder
+    styles:
+      - Background:=$bg2
+      - Shadow:=
+      - BorderThickness=1
+      - BorderBrush:=$border
+  - target: TextBlock#InnerTextBlock[Text=]
+    styles:
+      - Text=
+  - target: WindowsInternal.ComposableShell.Experiences.Switcher.VirtualDesktopBarElement#VirtualDesktopBar > Grid#GridElement > Border#VirtualDesktopBarBackground
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskListButtonPanel#ExperienceToggleButtonRootPanel > Border#BackgroundElement
+    styles:
+      - Background:=Transparent
+      - BorderThickness=0
+  - target: Grid#ConfirmatorMainGrid
+    styles:
+      - Background:=$bgx
+      - Shadow:=
+      - BorderThickness=1
+      - BorderBrush:=$border
+      - CornerRadius=22
+  - target: 'Taskbar.TaskListButton[AutomationProperties.AutomationId=Appid: com.squirrel.TIDAL.TIDAL] > Taskbar.TaskListLabeledButtonPanel#IconPanel > Windows.UI.Xaml.Controls.Image#Icon'
+    styles:
+      - Source:=C:\Customization\Icons\Apps\Tidal.png
+styleConstants:
+  - bg=<WindhawkBlur BlurAmount="20" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.6" />
+  - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
+  - bgx=<WindhawkBlur BlurAmount="7" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.5" />
+  - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1"><GradientStop Color="#30A0A0A0" Offset="0.0"/><GradientStop Color="#25808080" Offset="0.5"/><GradientStop Color="#30A0A0A0" Offset="1.0"/></LinearGradientBrush>
+resourceVariables:
+  - variableKey: ''
+    value: ''
