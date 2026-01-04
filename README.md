@@ -63,4 +63,7 @@ No config, use Settings tab.
 ### 🖼️ Wallpaper
 [Link](https://www.pexels.com/es-es/foto/foto-de-las-montanas-rocosas-1612364/)
 
-## That's it. Enjoy!
+____
+
+## 🧉 Made with cariño by [@Acercandr0](https://github.com/Acercandr0)
+Enjoy it. Fork it. Remix it. Make it yours.
