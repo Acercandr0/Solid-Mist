@@ -1,5 +1,6 @@
 RenderingMod:
   ThemeBackground: 1
+  SysColors: 1
   AccentColorControls: 1
   TextAlphaBlend: 1
 type: acrylicblur
@@ -26,6 +27,9 @@ BorderColor:
   MenuBorderColor: 0
 RuledPrograms:
   - target: olk.exe
+    RenderingMod:
+      ThemeBackground: 0
+      AccentColorControls: 0
     type: mica
     AccentBlurBehind: ''
     ImmersiveDarkTitle: 0
