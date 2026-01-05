@@ -57,13 +57,16 @@ No config, set on top on Settings tab.
 ### 10. Taskbar on top for Windows 11
 No config, use Settings tab.
 
+### 11. Taskbar ContentPresenter Injector
+No config, just install.
+
 ### 🖱️ Cursor
 [Minimalistic V3 cursor](https://www.deviantart.com/skyeo84/art/Minimalistic-V3-cursor-909469275)
 
 ### 🖼️ Wallpaper
 [Link](https://www.pexels.com/es-es/foto/foto-de-las-montanas-rocosas-1612364/)
 
-____
+---
 
 ## 🧉 Made with cariño by [@Acercandr0](https://github.com/Acercandr0)
 Enjoy it. Fork it. Remix it. Make it yours.
