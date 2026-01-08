@@ -30,21 +30,22 @@ controlStyles:
       - BorderThickness=0
   - target: Grid#RootGrid > Taskbar.TaskbarBackground > Grid
     styles:
-      - BorderThickness=0
+      - BorderThickness=0,0,0,0.5
       - Margin=0
+      - BorderBrush:=$bg2
   - target: Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundFill
     styles:
       - Fill:=$bg
   - target: Image#OverlayIcon
     styles:
       - RenderTransform:=<ScaleTransform ScaleX="0.8" ScaleY="0.8" />
-      - Margin=10,-3,0,0
+      - Margin=10,-5,0,0
       - Canvas.ZIndex=1
       - RenderTransformOrigin:=0.5,0.5
   - target: Taskbar.Badge#BadgeControl
     styles:
       - RenderTransform:=<ScaleTransform ScaleX="0.8" ScaleY="0.8" />
-      - Margin=10,-3,0,0
+      - Margin=10,-5,0,0
       - Canvas.ZIndex=1
       - RenderTransformOrigin:=0.5,0.5
   - target: MenuFlyoutPresenter > Border
@@ -64,8 +65,7 @@ controlStyles:
       - BorderBrush:=$border
   - target: Rectangle#BackgroundStroke
     styles:
-      - Height=1
-      - Opacity=0.3
+      - Height=0
   - target: Grid#ModalRootGrid > Border#BackgroundElement
     styles:
       - Background:=$bg
@@ -127,14 +127,20 @@ controlStyles:
       - Content@InactiveNormal:=$StartIcon
       - Content@ActiveNormal:=$StartOpen
       - Canvas.ZIndex=-1
+      - Width=20
+      - Height=20
+      - ContentTransitions@ActiveNormal:=<TransitionCollection><EntranceThemeTransition FromVerticalOffset="-10" /></TransitionCollection>
+  - target: 'Taskbar.TaskListButton[AutomationProperties.AutomationId=Appid: com.squirrel.TIDAL.TIDAL] > Taskbar.TaskListLabeledButtonPanel#IconPanel > Windows.UI.Xaml.Controls.Image#Icon'
+    styles:
+      - Source=file:///C:/Customization/Icons/Apps/Tidal.png
 styleConstants:
   - bg=<WindhawkBlur BlurAmount="20" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.6" />
   - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
   - bgx=<WindhawkBlur BlurAmount="7" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.5" />
-  - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1"><GradientStop Color="#30A0A0A0" Offset="0.0"/><GradientStop Color="#25808080" Offset="0.5"/><GradientStop Color="#30A0A0A0" Offset="1.0"/></LinearGradientBrush>
-  - 'StartIcon=<Viewbox Width="20" Height="20" Stretch="Fill"><Grid><PathIcon Width="24" Height="24" Data="M 1.344 0 H 11.52 V 11.52 H 0 V 1.344 A 4 4 0 0 1 1.344 0 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon><PathIcon Width="24" Height="24" Data="M 12.48 0 H 22.656 A 4 4 0 0 1 24 1.344 V 11.52 H 12.48 Z" Foreground="{ThemeResource TextFillColorSecondary}"/><PathIcon Width="24" Height="24" Data="M 0 12.48 H 11.52 V 24 H 1.344 A 4 4 0 0 1 0 22.656 V 12.48 Z" Foreground="{ThemeResource TextFillColorSecondary}"/><PathIcon Width="24" Height="24" Data="M 12.48 12.48 H 24 V 22.656 A 4 4 0 0 1 22.656 24 H 12.48 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Grid></Viewbox>'
-  - 'PressedIcon=<Viewbox Width="16" Height="16" Stretch="Fill"><Grid><PathIcon Width="24" Height="24" Data="M 1.344 0 H 11.52 V 11.52 H 0 V 1.344 A 4 4 0 0 1 1.344 0 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon><PathIcon Width="24" Height="24" Data="M 12.48 0 H 22.656 A 4 4 0 0 1 24 1.344 V 11.52 H 12.48 Z" Foreground="{ThemeResource TextFillColorSecondary}"/><PathIcon Width="24" Height="24" Data="M 0 12.48 H 11.52 V 24 H 1.344 A 4 4 0 0 1 0 22.656 V 12.48 Z" Foreground="{ThemeResource TextFillColorSecondary}"/><PathIcon Width="24" Height="24" Data="M 12.48 12.48 H 24 V 22.656 A 4 4 0 0 1 22.656 24 H 12.48 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Grid></Viewbox>'
-  - 'StartOpen=<Viewbox Width="20" Height="20" Stretch="Fill"><Grid><PathIcon Width="24" Height="24" Data="M 1.344 0 H 11.52 V 11.52 H 0 V 1.344 A 4 4 0 0 1 1.344 0 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon><PathIcon Width="24" Height="24" Data="M 12.48 0 H 22.656 A 4 4 0 0 1 24 1.344 V 11.52 H 12.48 Z" Foreground="{ThemeResource TextFillColorSecondary}"/><PathIcon Width="24" Height="24" Data="M 0 12.48 H 11.52 V 24 H 1.344 A 4 4 0 0 1 0 22.656 V 12.48 Z" Foreground="{ThemeResource TextFillColorSecondary}"/><PathIcon Width="24" Height="24" Data="M 12.48 12.48 H 24 V 22.656 A 4 4 0 0 1 22.656 24 H 12.48 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Grid></Viewbox>'
+  - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1" Opacity="0.15"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="0.5"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1.0"/></LinearGradientBrush>
+  - StartIcon=<Viewbox Stretch="Uniform"><PathIcon Data="F1 M 1.4 0 H 12 V 12 H 0 V 1.4 A 1.4 1.4 0 0 1 1.4 0 Z M 13 0 H 23.6 A 1.4 1.4 0 0 1 25 1.4 V 12 H 13 Z M 0 13 H 12 V 25 H 1.4 A 1.4 1.4 0 0 1 0 23.6 V 13 Z M 13 13 H 25 V 23.6 A 1.4 1.4 0 0 1 23.6 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
+  - PressedIcon=<Viewbox Stretch="Uniform"><PathIcon Data="F1 M 1.4 0 H 12 V 12 H 0 V 1.4 A 1.4 1.4 0 0 1 1.4 0 Z M 13 0 H 23.6 A 1.4 1.4 0 0 1 25 1.4 V 12 H 13 Z M 0 13 H 12 V 25 H 1.4 A 1.4 1.4 0 0 1 0 23.6 V 13 Z M 13 13 H 25 V 23.6 A 1.4 1.4 0 0 1 23.6 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
+  - StartOpen=<Viewbox Stretch="Uniform"><PathIcon Data="F1 M 1.4 0 H 12 V 12 H 0 V 1.4 A 1.4 1.4 0 0 1 1.4 0 Z M 13 0 H 23.6 A 1.4 1.4 0 0 1 25 1.4 V 12 H 13 Z M 0 13 H 12 V 25 H 1.4 A 1.4 1.4 0 0 1 0 23.6 V 13 Z M 13 13 H 25 V 23.6 A 1.4 1.4 0 0 1 23.6 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
 resourceVariables:
   - variableKey: ''
     value: ''

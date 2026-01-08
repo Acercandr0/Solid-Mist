@@ -150,10 +150,10 @@ controlStyles:
       - Background:=$bg3
       - BorderThickness=1
       - Padding=5,5,10,5
-      - BorderBrush:=$border
       - Width=310
       - Height=80
-      - CornerRadius=15
+      - CornerRadius=10
+      - BorderBrush=#20FFFFFF
   - target: Button#Videos_Preview_LockScreen_LockScreen
     styles:
       - Visibility=Collapsed
@@ -173,7 +173,7 @@ styleConstants:
   - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
   - bg3=<WindhawkBlur BlurAmount="15" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.1" />
   - bg4=<WindhawkBlur BlurAmount="70" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
-  - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1"><GradientStop Color="#30A0A0A0" Offset="0.0"/><GradientStop Color="#25808080" Offset="0.5"/><GradientStop Color="#30A0A0A0" Offset="1.0"/></LinearGradientBrush>
+  - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1" Opacity="0.15"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="0.5"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1.0"/></LinearGradientBrush>
 resourceVariables:
   - variableKey: ''
     value: ''

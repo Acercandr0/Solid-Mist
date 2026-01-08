@@ -194,7 +194,7 @@ controlStyles:
 styleConstants:
   - bg=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.6" />
   - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
-  - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1"><GradientStop Color="#30A0A0A0" Offset="0.0"/><GradientStop Color="#25808080" Offset="0.5"/><GradientStop Color="#30A0A0A0" Offset="1.0"/></LinearGradientBrush>
+  - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1" Opacity="0.15"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="0.5"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1.0"/></LinearGradientBrush>
   - screenfix=0,0,0,450
   - screenfix2=0,0,0,-970
 resourceVariables:
