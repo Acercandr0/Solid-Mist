@@ -20,7 +20,7 @@ controlStyles:
       - RenderTransform:=<RotateTransform Angle="180" />
   - target: Windows.UI.Xaml.Controls.Grid#FrameRoot
     styles:
-      - MaxHeight=560
+      - MaxHeight=565
   - target: Border#RightCompanionDropShadow
     styles:
       - Visibility=Collapsed
@@ -39,6 +39,7 @@ controlStyles:
       - Background:=$bg
       - BorderThickness=1
       - BorderBrush:=$border
+      - CornerRadius=$r
   - target: Border#dropshadow
     styles:
       - Visibility=Collapsed
@@ -47,55 +48,65 @@ controlStyles:
       - Visibility=Collapsed
   - target: StartDocked.AppListView#NavigationPanePlacesListView > Windows.UI.Xaml.Controls.Border
     styles:
-      - Margin=0,0,15,0
+      - Margin=0,0,10,0
   - target: Grid#UserTileIcon
     styles:
-      - Width=35
-      - Height=35
-      - Margin=-10,0,0,0
+      - Margin=-9,0,0,0
+  - target: Windows.UI.Xaml.Controls.Grid#NavPanePlaceholder
+    styles:
+      - Height=55
   - target: StartDocked.NavigationPaneButton#UserTileButton
     styles:
-      - Padding=10,0,10,0
-      - CornerRadius=20
+      - CornerRadius=20,10,10,20
   - target: StartDocked.NavigationPaneButton#PowerButton > Grid@CommonStates > Border#BackgroundBorder
     styles:
       - CornerRadius=30
+      - BorderBrush:=$border
+      - BorderThickness=1
   - target: Button#ShowAllAppsButton
     styles:
       - Background:=Transparent
       - BorderBrush:=$border
+      - CornerRadius=$r
   - target: Button#PrimaryActionBarButton
     styles:
       - Background:=Transparent
+      - CornerRadius=$r
   - target: Button#ActionBarOverflowButton
     styles:
       - Background:=Transparent
+      - CornerRadius=$r
   - target: Button#CloseAllAppsButton
     styles:
       - Background:=Transparent
       - BorderBrush:=$border
+      - CornerRadius=$r
   - target: Border#AcrylicBorder
     styles:
       - Background:=$bg
       - BorderBrush:=$border
       - BorderThickness=1
+      - CornerRadius=$r
   - target: Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter#LayoutRoot
     styles:
       - BorderBrush:=$border
       - Shadow:=
       - Background:=$bg3
       - BorderThickness=1
+      - CornerRadius=$r
   - target: StartMenu.CategoryControl > Grid#RootGrid > Border
     styles:
       - BorderBrush:=$border
       - Background:=$bg4
-      - BorderThickness=1
+      - BorderThickness=0.5
+      - CornerRadius=$r
   - target: StartMenu.FolderModal#StartFolderModal > Grid#Root > Border
     styles:
-      - Background:=$bg2
+      - Background:=$bg3
       - BorderBrush:=$border
       - Shadow:=
       - BorderThickness=1
+      - CornerRadius=$r
   - target: StartMenu.SearchBoxToggleButton#SearchBoxToggleButton > Windows.UI.Xaml.Controls.Grid > Windows.UI.Xaml.Controls.Border#BorderElement
     styles:
       - Background:=Transparent
@@ -169,11 +180,12 @@ webContentStyles:
       - ''
 webContentCustomJs: ''
 styleConstants:
-  - bg=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.6" />
-  - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
-  - bg3=<WindhawkBlur BlurAmount="15" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.1" />
-  - bg4=<WindhawkBlur BlurAmount="70" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
+  - bg=<WindhawkBlur BlurAmount="15" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.6" />
+  - bg2=<WindhawkBlur BlurAmount="20" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
+  - bg3=<WindhawkBlur BlurAmount="13" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.1" />
+  - bg4=<WindhawkBlur BlurAmount="70" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.1" />
   - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1" Opacity="0.15"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="0.5"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1.0"/></LinearGradientBrush>
+  - r=10
 resourceVariables:
   - variableKey: ''
     value: ''

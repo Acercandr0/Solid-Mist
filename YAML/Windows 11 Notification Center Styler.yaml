@@ -7,40 +7,50 @@ controlStyles:
       - Shadow:=
       - BorderBrush:=$border
       - VerticalAlignment=Stretch
+      - CornerRadius=$r
   - target: Grid#CalendarCenterGrid
     styles:
       - Background:=$bg
       - BorderThickness=1
       - Shadow:=
       - BorderBrush:=$border
+      - CornerRadius=$r
   - target: Grid#ControlCenterRegion
     styles:
+      - Margin=$screenfix
       - Background:=$bg
       - BorderThickness=1
       - Shadow:=
       - BorderBrush:=$border
-      - Margin=$screenfix
+      - CornerRadius=$r
   - target: Grid#MediaTransportControlsRegion
     styles:
+      - Margin=$screenfix2
       - Background:=$bg
       - BorderThickness=1
       - Shadow:=
       - BorderBrush:=$border
-      - Margin=$screenfix2
+      - CornerRadius=$r
+  - target: ControlCenter.FrameWithContentChanged#L2Frame
+    styles:
+      - Padding=0,0,0,11
   - target: Border#ToastBackgroundBorder2
     styles:
+      - CornerRadius=$r
       - Background:=$bg
       - BorderThickness=1
       - Shadow:=
       - BorderBrush=$border
   - target: MenuFlyoutPresenter
     styles:
+      - CornerRadius=$r
       - Background:=$bg
       - BorderThickness=1
       - Shadow:=
       - BorderBrush=$border
   - target: Border#JumpListRestyledAcrylic
     styles:
+      - CornerRadius=$r
       - Background:=$bg
       - BorderThickness=1
       - Shadow:=
@@ -58,6 +68,7 @@ controlStyles:
       - BorderThickness=0
   - target: ScrollViewer#ListContent
     styles:
+      - CornerRadius=$r
       - Background:=Transparent
       - Shadow:=
   - target: ContentPresenter#PageContent
@@ -81,6 +92,7 @@ controlStyles:
       - Background:=Transparent
   - target: Grid#L1Grid > Border
     styles:
+      - CornerRadius=$r
       - Background:=Transparent
   - target: Windows.UI.Xaml.Controls.Image#IconImage
     styles:
@@ -94,22 +106,20 @@ controlStyles:
   - target: Grid#ThumbnailImage
     styles:
       - Grid.Column=0
-      - Margin=-2,-5,0,0
-      - Height=130
-      - Width=130
+      - Margin=-5,-10,0,0
+      - Height=140
+      - Width=140
+      - CornerRadius=$r
   - target: ListView#MediaButtonsListView
     styles:
       - RenderTransform:=<ScaleTransform ScaleX="0.9" ScaleY="0.9" />
       - RenderTransformOrigin=0.5,0.5
       - Margin=0,-30,0,0
       - HorizontalAlignment=2
-  - target: ContentPresenter
-    styles:
-      - BorderThickness=0
   - target: Grid#MediaTransportControlsRoot
     styles:
       - Background:=Transparent
-  - target: Grid[AutomationProperties.LocalizedLandmarkType = Footer]
+  - target: Windows.UI.Xaml.Controls.Grid#FooterGrid
     styles:
       - BorderThickness=0
   - target: ContentPresenter > Windows.UI.Xaml.Controls.Border
@@ -123,13 +133,15 @@ controlStyles:
       - Margin=0,0,-10,-40
   - target: ControlCenter.PaginatedToggleButton#ToggleButton > ContentPresenter#ContentPresenter
     styles:
-      - BorderThickness=0
+      - BorderThickness=1
+      - BorderBrush:=$border
   - target: ControlCenter.PaginatedToggleButton#SplitL2Button > ContentPresenter#ContentPresenter
     styles:
-      - BorderThickness=0
+      - BorderThickness=1,0,0,0
       - BorderBrush:=$border
   - target: Windows.UI.Xaml.Controls.ContentControl#TogglesGroup > Windows.UI.Xaml.Controls.ContentPresenter > ControlCenter.PaginatedGridView > Windows.UI.Xaml.Controls.Grid
     styles:
+      - CornerRadius=$r
       - BorderThickness=0
   - target: Windows.UI.Xaml.Controls.ScrollViewer#PipsPagerScrollViewer
     styles:
@@ -174,12 +186,13 @@ controlStyles:
   - target: Grid#SuggestionUIGrid
     styles:
       - Background:=$bg
+      - CornerRadius=$r
   - target: Windows.UI.Xaml.Controls.Border#ItemOpaquePlating
     styles:
       - BorderThickness=1
       - BorderBrush:=$border
       - Background:=Transparent
-      - CornerRadius=7
+      - CornerRadius=$r
   - target: Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter#LayoutRoot
     styles:
       - Background:=$bg2
@@ -189,12 +202,14 @@ controlStyles:
     styles:
       - BorderThickness=1
       - BorderBrush:=$border
-      - CornerRadius=12
+      - CornerRadius=$r
       - Shadow:=
 styleConstants:
-  - bg=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.6" />
+  - bg=<WindhawkBlur BlurAmount="20" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.6" />
   - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
+  - bgx=<WindhawkBlur BlurAmount="7" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.5" />
   - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1" Opacity="0.15"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="0.5"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1.0"/></LinearGradientBrush>
+  - r=13
   - screenfix=0,0,0,450
   - screenfix2=0,0,0,-970
 resourceVariables:

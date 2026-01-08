@@ -7,7 +7,7 @@ Windhawk theme and some tweaks for Windows 11 25H2.
 ![lockscreen](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/lockscreen.png)
 ![explorer](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/explorer.png)
 ![explorer+](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/explorer+.png)
-![wintab](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/wintab.png)
+![ctrl+tab](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/ctrl+tab.png)
 ![osd](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/osd.png)
 ![input](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/input.png)
 
@@ -60,7 +60,7 @@ No config, use Settings tab.
 ### 11. Taskbar ContentPresenter Injector
 No config, just install.
 
-### 🖱️ Cursor
+### 🖱️ Cursor (I use the black + outline version)
 [Minimalistic V3 cursor](https://www.deviantart.com/skyeo84/art/Minimalistic-V3-cursor-909469275)
 
 ### 🖼️ Wallpaper
