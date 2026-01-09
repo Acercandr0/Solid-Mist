@@ -24,7 +24,7 @@ Windhawk theme and some tweaks for Windows 11 25H2.
 
 [YAML FILE](./YAML/Windows%2011%20Start%20Menu%20Styler.yaml)
 
-> **📝 Optional:** If you want to apply the lock screen style, add `LockApp.exe` to the custom process list in the Windows 11 Start Menu Styler Advanced Tab.
+> **📝 Optional:** If you want to apply the lock screen style, add `LockApp.exe` to the custom process list in the Windows 11 Start Menu Styler Advanced Tab and the Process inclusion list on Windhawk Settings > Advanced Settings
 
 ### 4. Windows 11 Taskbar Styler
 
@@ -37,7 +37,7 @@ Windhawk theme and some tweaks for Windows 11 25H2.
 [YAML FILE](./YAML/Windows%2011%20Notification%20Center%20Styler.yaml)
 ⚠️ Change style constanst `screenfix` and `screenfx2` in settings tab to adjust it for your screen resolution.
 
-> **📝 Optional:** If you want to apply this styling to the input and clipboard window, add `TextInputHost.exe` to the custom process list in the Windows 11 Notification Center Styler Advanced Tab.
+> **📝 Optional:** If you want to apply this styling to the input and clipboard window, add `TextInputHost.exe` to the custom process list in the Windows 11 Notification Center Styler Advanced Tab and the Process inclusion list on Windhawk Settings > Advanced Settings.
 
 ### 6. Taskbar Clock Customization
 
