@@ -29,8 +29,8 @@ controlStyles:
   - target: Microsoft.UI.Xaml.Controls.ProgressBar#ProgressIndicator
     styles:
       - Width=25
-      - Margin=0,0,0,-1
-      - MinHeight=2.5
+      - Margin=0,0,0,1.5
+      - MinHeight=2
       - BorderThickness=0
   - target: Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundFill
     styles:

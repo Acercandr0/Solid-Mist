@@ -34,6 +34,7 @@ controlStyles:
       - Background:=$bg2
       - BorderThickness=1
       - BorderBrush:=$border
+      - CornerRadius=$r
   - target: Border#AppBorder
     styles:
       - Background:=$bg
