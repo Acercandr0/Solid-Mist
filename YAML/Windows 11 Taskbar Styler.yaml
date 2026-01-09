@@ -1,217 +1,158 @@
 theme: ''
 controlStyles:
-  - target: Grid#NotificationCenterGrid
+  - target: Taskbar.TaskListLabeledButtonPanel#IconPanel > Border
+    styles:
+      - Margin=0
+      - Padding=0
+      - BorderThickness=0
+      - Background:=Transparent
+  - target: Taskbar.TaskListButton#TaskListButton > Taskbar.TaskListLabeledButtonPanel#IconPanel > Border#MultiWindowElement
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskListLabeledButtonPanel#IconPanel
+    styles:
+      - Padding=0,0,0,2
+      - Margin=2,0,0,0
+  - target: Taskbar.TaskListLabeledButtonPanel@RunningIndicatorStates > Rectangle#RunningIndicator
+    styles:
+      - Width@ActiveRunningIndicator=20
+      - Height@ActiveRunningIndicator=2
+      - Width@InactiveRunningIndicator=2.5
+      - Margin=0,0,0,1.5
+      - Fill:=<SolidColorBrush Color="{ThemeResource SystemAccentColorLight2}" Opacity="1" />
+      - Fill@InactiveRunningIndicator:=<SolidColorBrush Color="{ThemeResource SystemAccentColorLight3}" Opacity="1"/>
+      - MaxWidth=20
+  - target: Windows.UI.Xaml.Shapes.Rectangle#ProgressBarTrack
+    styles:
+      - Fill:=<SolidColorBrush Color="{ThemeResource SystemAccentColor}" Opacity="0.6" />
+      - Margin=0
+  - target: Microsoft.UI.Xaml.Controls.ProgressBar#ProgressIndicator
+    styles:
+      - Width=25
+      - Margin=0,0,0,-1
+      - MinHeight=2.5
+      - BorderThickness=0
+  - target: Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundFill
+    styles:
+      - Fill:=$bg
+  - target: Image#OverlayIcon
+    styles:
+      - RenderTransform:=<ScaleTransform ScaleX="0.8" ScaleY="0.8" />
+      - Margin=6,-4,0,0
+      - Canvas.ZIndex=1
+      - RenderTransformOrigin:=0.5,0.5
+  - target: Taskbar.Badge#BadgeControl
+    styles:
+      - RenderTransform:=<ScaleTransform ScaleX="0.8" ScaleY="0.8" />
+      - Margin=6,-4,0,0
+      - Canvas.ZIndex=1
+      - RenderTransformOrigin:=0.5,0.5
+  - target: MenuFlyoutPresenter > Border
     styles:
       - Background:=$bg
-      - BorderThickness=1
       - Shadow:=
+      - BorderThickness=1
       - BorderBrush:=$border
-      - VerticalAlignment=Stretch
       - CornerRadius=$r
-  - target: Grid#CalendarCenterGrid
-    styles:
-      - Background:=$bg
-      - BorderThickness=1
-      - Shadow:=
-      - BorderBrush:=$border
-      - CornerRadius=$r
-  - target: Grid#ControlCenterRegion
-    styles:
-      - Margin=$screenfix
-      - Background:=$bg
-      - BorderThickness=1
-      - Shadow:=
-      - BorderBrush:=$border
-      - CornerRadius=$r
-  - target: Grid#MediaTransportControlsRegion
-    styles:
-      - Margin=$screenfix2
-      - Background:=$bg
-      - BorderThickness=1
-      - Shadow:=
-      - BorderBrush:=$border
-      - CornerRadius=$r
-  - target: ControlCenter.FrameWithContentChanged#L2Frame
-    styles:
-      - Padding=0,0,0,11
-  - target: Border#ToastBackgroundBorder2
-    styles:
-      - CornerRadius=$r
-      - Background:=$bg
-      - BorderThickness=1
-      - Shadow:=
-      - BorderBrush=$border
   - target: MenuFlyoutPresenter
     styles:
+      - Shadow:=
       - CornerRadius=$r
-      - Background:=$bg
-      - BorderThickness=1
-      - Shadow:=
-      - BorderBrush=$border
-  - target: Border#JumpListRestyledAcrylic
-    styles:
-      - CornerRadius=$r
-      - Background:=$bg
-      - BorderThickness=1
-      - Shadow:=
-      - BorderBrush:=$border
-  - target: ActionCenter.FlexibleToastView#FlexibleNormalToastView
-    styles:
-      - Background:=Transparent
-      - Shadow:=
-  - target: ActionCenter.FlexibleItemView
-    styles:
-      - Shadow:=
-  - target: ScrollViewer#CalendarControlScrollViewer
-    styles:
-      - Background:=Transparent
-      - BorderThickness=0
-  - target: ScrollViewer#ListContent
-    styles:
-      - CornerRadius=$r
-      - Background:=Transparent
-      - Shadow:=
-  - target: ContentPresenter#PageContent
-    styles:
-      - Background:=Transparent
-      - Shadow:=
-  - target: ContentPresenter#PageContent > Grid > Border
-    styles:
-      - Background:=Transparent
-      - Shadow:=
-  - target: QuickActions.ControlCenter.AccessibleWindow#PageWindow > ContentPresenter > Grid#FullScreenPageRoot
-    styles:
-      - Background:=Transparent
-      - Shadow:=
-  - target: QuickActions.ControlCenter.AccessibleWindow#PageWindow > ContentPresenter > Grid#FullScreenPageRoot > ContentPresenter#PageHeader
-    styles:
-      - Background:=Transparent
-      - Shadow:=
-  - target: Grid#NotificationCenterTopBanner
-    styles:
-      - Background:=Transparent
-  - target: Grid#L1Grid > Border
-    styles:
-      - CornerRadius=$r
-      - Background:=Transparent
-  - target: Windows.UI.Xaml.Controls.Image#IconImage
-    styles:
-      - Visibility=Collapsed
-  - target: TextBlock#AppNameText
-    styles:
-      - Margin=160,0,0,-40
-  - target: StackPanel#PrimaryAndSecondaryTextContainer
-    styles:
-      - Margin=160,-10,0,0
-  - target: Grid#ThumbnailImage
-    styles:
-      - Grid.Column=0
-      - Margin=-5,-10,0,0
-      - Height=140
-      - Width=140
-      - CornerRadius=$r
-  - target: ListView#MediaButtonsListView
-    styles:
-      - RenderTransform:=<ScaleTransform ScaleX="0.9" ScaleY="0.9" />
-      - RenderTransformOrigin=0.5,0.5
-      - Margin=0,-30,0,0
-      - HorizontalAlignment=2
-  - target: Grid#MediaTransportControlsRoot
-    styles:
-      - Background:=Transparent
-  - target: Windows.UI.Xaml.Controls.Grid#FooterGrid
-    styles:
-      - BorderThickness=0
-  - target: ContentPresenter > Windows.UI.Xaml.Controls.Border
-    styles:
-      - BorderThickness=0
-  - target: ActionCenter.FocusSessionControl
-    styles:
-      - Height=0
-  - target: Windows.UI.Xaml.Controls.Button#SessionSwitchButton
-    styles:
-      - Margin=0,0,-10,-40
-  - target: ControlCenter.PaginatedToggleButton#ToggleButton > ContentPresenter#ContentPresenter
-    styles:
-      - BorderThickness=1
-      - BorderBrush:=$border
-  - target: ControlCenter.PaginatedToggleButton#SplitL2Button > ContentPresenter#ContentPresenter
-    styles:
-      - BorderThickness=1,0,0,0
-      - BorderBrush:=$border
-  - target: Windows.UI.Xaml.Controls.ContentControl#TogglesGroup > Windows.UI.Xaml.Controls.ContentPresenter > ControlCenter.PaginatedGridView > Windows.UI.Xaml.Controls.Grid
-    styles:
-      - CornerRadius=$r
-      - BorderThickness=0
-  - target: Windows.UI.Xaml.Controls.ScrollViewer#PipsPagerScrollViewer
-    styles:
-      - Visibility=Collapsed
-  - target: Microsoft.UI.Xaml.Controls.ItemsRepeater > Windows.UI.Xaml.Controls.Button
-    styles:
-      - Visibility=Collapsed
-  - target: ControlCenter.ControlCenterPage
-    styles:
-      - RenderTransform:=<RotateTransform Angle="180" />
-      - RenderTransformOrigin=0.5,0.5
-  - target: ControlCenter.ControlCenterPage > Grid#RootGrid
-    styles:
-      - RenderTransform:=<RotateTransform Angle="180" />
-      - RenderTransformOrigin=0.5,0.5
-  - target: Windows.UI.Xaml.Shapes.Rectangle#HorizontalTrackRect
-    styles:
-      - Margin=0,-10,10,-10
-      - Opacity=0.3
-  - target: Windows.UI.Xaml.Shapes.Rectangle#HorizontalDecreaseRect
-    styles:
-      - Margin=0,-10,-10,-10
-      - Height=4
-  - target: Windows.UI.Xaml.Controls.Primitives.Thumb#HorizontalThumb
-    styles:
-      - Visibility=Visible
-      - Height=20
-      - Width=20
-      - Margin=0
-  - target: Windows.UI.Xaml.Controls.Primitives.Thumb#HorizontalThumb > Windows.UI.Xaml.Controls.Border
-    styles:
-      - Background:=<WindhawkBlur BlurAmount="5" TintColor="#00FFFFFF"/>
-      - BorderBrush:=<SolidColorBrush Color="White" Opacity="0.2"/>
-      - BorderThickness=1
-      - CornerRadius=15
-  - target: Windows.UI.Xaml.Controls.Primitives.Thumb#HorizontalThumb > Windows.UI.Xaml.Controls.Border > Windows.UI.Xaml.Shapes.Ellipse#SliderInnerThumb
-    styles:
-      - Visibility=Visible
-  - target: Windows.UI.Xaml.Controls.Primitives.ScrollBar#VerticalScrollBar
-    styles:
-      - Visibility=1
-  - target: Grid#SuggestionUIGrid
+  - target: Border#OverflowFlyoutBackgroundBorder
     styles:
       - Background:=$bg
-      - CornerRadius=$r
-  - target: Windows.UI.Xaml.Controls.Border#ItemOpaquePlating
-    styles:
+      - Shadow:=
       - BorderThickness=1
       - BorderBrush:=$border
-      - Background:=Transparent
       - CornerRadius=$r
+  - target: Rectangle#BackgroundStroke
+    styles:
+      - Height=0.5
+  - target: Grid#ModalRootGrid > Border#BackgroundElement
+    styles:
+      - Shadow:=
+      - CornerRadius=30
+      - BorderBrush:=$border
+      - Background:=$bg2
+  - target: Windows.UI.Xaml.Controls.Border#HoverFlyoutBackground
+    styles:
+      - Shadow:=
+      - BorderThickness=1
+      - Background:=$bg
+      - BorderBrush:=$border
+      - CornerRadius=$r
+  - target: Windows.UI.Xaml.Controls.Border#HoverFlyoutBackground > Taskbar.TaskbarBackground#HoverFlyoutBackgroundControl > Windows.UI.Xaml.Controls.Grid > Windows.UI.Xaml.Shapes.Rectangle#BackgroundFill
+    styles:
+      - Fill:=Transparent
   - target: Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter#LayoutRoot
     styles:
-      - Background:=$bg2
       - BorderBrush:=$border
-      - BorderThickness=1
-  - target: Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter
+      - Shadow:=
+      - Background:=$bgx
+      - CornerRadius=$r
+  - target: Windows.UI.Xaml.Controls.Border#BackgroundDimmingLayer
     styles:
+      - Background:=$bg2
+  - target: Border#SnapBarBorder
+    styles:
+      - Background:=$bg2
+      - Shadow:=
       - BorderThickness=1
       - BorderBrush:=$border
       - CornerRadius=$r
+  - target: Border#SnapPickerBorder
+    styles:
+      - Background:=$bg2
       - Shadow:=
+      - BorderThickness=1
+      - BorderBrush:=$border
+      - CornerRadius=$r
+  - target: TextBlock#InnerTextBlock[Text=]
+    styles:
+      - Text=
+  - target: WindowsInternal.ComposableShell.Experiences.Switcher.VirtualDesktopBarElement#VirtualDesktopBar > Grid#GridElement > Border#VirtualDesktopBarBackground
+    styles:
+      - Visibility=Collapsed
+  - target: Taskbar.TaskListButtonPanel#ExperienceToggleButtonRootPanel > Border#BackgroundElement
+    styles:
+      - Background:=Transparent
+      - BorderThickness=0
+  - target: Grid#ConfirmatorMainGrid
+    styles:
+      - Background:=$bgx
+      - Shadow:=
+      - BorderThickness=1
+      - BorderBrush:=$border
+      - CornerRadius=22
+  - target: Taskbar.ExperienceToggleButton#LaunchListButton[AutomationProperties.AutomationId=StartButton] > Taskbar.TaskListButtonPanel > Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer#Icon
+    styles:
+      - Visibility=1
+  - target: Taskbar.ExperienceToggleButton#LaunchListButton[AutomationProperties.AutomationId=StartButton] > Taskbar.TaskListButtonPanel@CommonStates > Windows.UI.Xaml.Controls.ContentPresenter#CustomInjectedPresenter
+    styles:
+      - Content@InactivePointerOver:=$StartOpen
+      - Content@ActivePressed:=$PressedIcon2
+      - Content@ActivePointerOver:=$StartOpen
+      - Content@InactivePressed:=$PressedIcon
+      - Content@InactiveNormal:=$StartIcon
+      - Content@ActiveNormal:=$StartOpen
+      - ContentTransitions@ActiveNormal:=<TransitionCollection><EntranceThemeTransition FromHorizontalOffset="0" FromVerticalOffset="0" IsStaggeringEnabled="False" /></TransitionCollection>
+      - ContentTransitions@InactiveNormal:=<TransitionCollection><EntranceThemeTransition FromHorizontalOffset="0" FromVerticalOffset="0" IsStaggeringEnabled="False" /></TransitionCollection>
+      - ContentTransitions@InactivePointerOver:=<TransitionCollection><EntranceThemeTransition FromHorizontalOffset="0" FromVerticalOffset="0" IsStaggeringEnabled="False" /></TransitionCollection>
+      - ContentTransitions@ActivePointerOver:=<TransitionCollection><EntranceThemeTransition FromHorizontalOffset="0" FromVerticalOffset="0" IsStaggeringEnabled="False" /></TransitionCollection>
+      - Margin=0,1,0,0
+  - target: 'Taskbar.TaskListButton[AutomationProperties.AutomationId=Appid: com.squirrel.TIDAL.TIDAL] > Taskbar.TaskListLabeledButtonPanel#IconPanel > Windows.UI.Xaml.Controls.Image#Icon'
+    styles:
+      - Source=file:///C:/Customization/Icons/Apps/Tidal.png
 styleConstants:
   - bg=<WindhawkBlur BlurAmount="20" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.6" />
   - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
-  - bgx=<WindhawkBlur BlurAmount="7" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.5" />
+  - bgx=<WindhawkBlur BlurAmount="7" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
   - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1" Opacity="0.15"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="0.5"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1.0"/></LinearGradientBrush>
+  - StartIcon=<Viewbox Width="20" Height="20" Stretch="Uniform"><PathIcon Data="F1 M 2.4 0 H 12 V 12 H 0 V 2.4 A 2.4 2.4 0 0 1 2.4 0 Z M 13 0 H 22.6 A 2.4 2.4 0 0 1 25 2.4 V 12 H 13 Z M 0 13 H 12 V 25 H 2.4 A 2.4 2.4 0 0 1 0 23.6 V 13 Z M 13 13 H 25 V 22.6 A 2.4 2.4 0 0 1 22.6 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0.1,0.1" EndPoint="0.9,0.9"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0.4"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.8"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
+  - PressedIcon=<Viewbox Width="18.5" Height="18.5" Stretch="Uniform"><PathIcon Data="F1 M 2.4 0 H 12 V 12 H 0 V 2.4 A 2.4 2.4 0 0 1 2.4 0 Z M 13 0 H 22.6 A 2.4 2.4 0 0 1 25 2.4 V 12 H 13 Z M 0 13 H 12 V 25 H 2.4 A 2.4 2.4 0 0 1 0 22.6 V 13 Z M 13 13 H 25 V 22.6 A 2.4 2.4 0 0 1 22.6 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="1,1" EndPoint="0,0"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
+  - StartOpen=<Viewbox Width="20" Height="20" Stretch="Uniform"><PathIcon Data="F1 M 2.4 0 H 12 V 12 H 0 V 2.4 A 2.4 2.4 0 0 1 2.4 0 Z M 13 0 H 22.6 A 2.4 2.4 0 0 1 25 2.4 V 12 H 13 Z M 0 13 H 12 V 25 H 2.4 A 2.4 2.4 0 0 1 0 22.6 V 13 Z M 13 13 H 25 V 22.6 A 2.4 2.4 0 0 1 22.6 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="1,1" EndPoint="0,0"><GradientStop Color="{ThemeResource SystemAccentColor}" Offset="0"/><GradientStop Color="{ThemeResource SystemAccentColorLight2}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
+  - PressedIcon2=<Viewbox Width="18.5" Height="18.5" Stretch="Uniform"><PathIcon Data="F1 M 2.4 0 H 12 V 12 H 0 V 2.4 A 2.4 2.4 0 0 1 2.4 0 Z M 13 0 H 22.6 A 2.4 2.4 0 0 1 25 2.4 V 12 H 13 Z M 0 13 H 12 V 25 H 2.4 A 2.4 2.4 0 0 1 0 22.6 V 13 Z M 13 13 H 25 V 22.6 A 2.4 2.4 0 0 1 22.6 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="1,1" EndPoint="0,0"><GradientStop Color="{ThemeResource SystemAccentColor}" Offset="0"/><GradientStop Color="{ThemeResource SystemAccentColorLight2}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
   - r=13
-  - screenfix=0,0,0,450
-  - screenfix2=0,0,0,-970
 resourceVariables:
   - variableKey: ''
     value: ''

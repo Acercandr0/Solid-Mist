@@ -47,7 +47,7 @@ controlStyles:
       - Background:=$bg
       - BorderThickness=1
       - Shadow:=
-      - BorderBrush=$border
+      - BorderBrush:=$border
   - target: Border#JumpListRestyledAcrylic
     styles:
       - CornerRadius=$r
