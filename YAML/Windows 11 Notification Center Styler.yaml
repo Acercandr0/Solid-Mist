@@ -209,7 +209,7 @@ styleConstants:
   - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
   - bgx=<WindhawkBlur BlurAmount="7" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.5" />
   - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1" Opacity="0.15"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="0.5"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1.0"/></LinearGradientBrush>
-  - r=13
+  - r=10
   - screenfix=0,0,0,450
   - screenfix2=0,0,0,-970
 resourceVariables:
