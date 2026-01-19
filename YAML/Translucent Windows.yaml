@@ -2,52 +2,50 @@ RenderingMod:
   ThemeBackground: 1
   SysColors: 1
   AccentColorControls: 1
-  TextAlphaBlend: 1
 type: acrylicblur
 AccentBlurBehind: 9D000000
 ImmersiveDarkTitle: 1
 ExtendFrame: 1
-CornerOption: default
-RainbowSpeed: 1
+CornerOption: ''
+RainbowSpeed: 0
 TitlebarColor:
   ColorTitlebar: 0
   RainbowTitlebar: 0
-  titlerbarstyles_active: '2'
-  titlerbarstyles_inactive: 00FFFF
+  titlerbarstyles_active: ''
+  titlerbarstyles_inactive: ''
 TitlebarTextColor:
   ColorTitlebarText: 0
   RainbowTextColor: 0
-  titlerbarcolorstyles_active: FF0000
-  titlerbarcolorstyles_inactive: 00FFFF
+  titlerbarcolorstyles_active: ''
+  titlerbarcolorstyles_inactive: ''
 BorderColor:
   ColorBorder: 0
   RainbowBorder: 0
-  borderstyles_active: '2'
-  borderstyles_inactive: '1'
-  MenuBorderColor: 0
+  borderstyles_active: ''
+  borderstyles_inactive: ''
 RuledPrograms:
   - target: olk.exe
     RenderingMod:
       ThemeBackground: 0
       AccentColorControls: 0
-    type: mica
-    AccentBlurBehind: ''
+    type: acrylicblur
+    AccentBlurBehind: 9D000000
     ImmersiveDarkTitle: 0
     ExtendFrame: 0
-    CornerOption: default
-    RainbowSpeed: 1
+    CornerOption: ''
+    RainbowSpeed: 0
     TitlebarColor:
       ColorTitlebar: 0
       RainbowTitlebar: 0
-      titlerbarstyles_active: '2'
-      titlerbarstyles_inactive: '1'
+      titlerbarstyles_active: ''
+      titlerbarstyles_inactive: ''
     TitlebarTextColor:
       ColorTitlebarText: 0
       RainbowTextColor: 0
-      titlerbarcolorstyles_active: FF0000
-      titlerbarcolorstyles_inactive: 00FFFF
+      titlerbarcolorstyles_active: ''
+      titlerbarcolorstyles_inactive: ''
     BorderColor:
       ColorBorder: 0
       RainbowBorder: 0
-      borderstyles_active: '2'
-      borderstyles_inactive: '1'
+      borderstyles_active: ''
+      borderstyles_inactive: ''
