@@ -4,6 +4,7 @@ RenderingMod:
   AccentColorControls: 1
 type: acrylicblur
 AccentBlurBehind: 9D000000
+FlyoutsEffects: 0
 ImmersiveDarkTitle: 1
 ExtendFrame: 1
 CornerOption: ''
@@ -24,12 +25,37 @@ BorderColor:
   borderstyles_active: ''
   borderstyles_inactive: ''
 RuledPrograms:
-  - target: olk.exe
+  - target: POWERPNT.EXE
     RenderingMod:
       ThemeBackground: 0
       AccentColorControls: 0
-    type: acrylicblur
-    AccentBlurBehind: 9D000000
+    type: mica
+    AccentBlurBehind: ''
+    ImmersiveDarkTitle: 0
+    ExtendFrame: 0
+    CornerOption: ''
+    RainbowSpeed: 0
+    TitlebarColor:
+      ColorTitlebar: 0
+      RainbowTitlebar: 0
+      titlerbarstyles_active: ''
+      titlerbarstyles_inactive: ''
+    TitlebarTextColor:
+      ColorTitlebarText: 0
+      RainbowTextColor: 0
+      titlerbarcolorstyles_active: ''
+      titlerbarcolorstyles_inactive: ''
+    BorderColor:
+      ColorBorder: 0
+      RainbowBorder: 0
+      borderstyles_active: ''
+      borderstyles_inactive: ''
+  - target: ONENOTE.EXE
+    RenderingMod:
+      ThemeBackground: 0
+      AccentColorControls: 0
+    type: acrylicsystem
+    AccentBlurBehind: ''
     ImmersiveDarkTitle: 0
     ExtendFrame: 0
     CornerOption: ''

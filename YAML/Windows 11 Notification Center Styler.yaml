@@ -94,32 +94,38 @@ controlStyles:
       - Visibility=Collapsed
   - target: TextBlock#AppNameText
     styles:
-      - Margin=160,0,0,-40
+      - Margin=155,0,0,-50
+  - target: Windows.UI.Xaml.Controls.Button#SessionSwitchButton
+    styles:
+      - BorderBrush:=$border
   - target: StackPanel#PrimaryAndSecondaryTextContainer
     styles:
-      - Margin=160,-10,0,0
+      - Margin=155,-35,0,0
   - target: Grid#ThumbnailImage
     styles:
       - Grid.Column=0
       - Margin=-5,-10,0,0
       - Height=140
       - Width=140
-      - CornerRadius=$r
+      - BorderThickness=1
+      - BorderBrush:=$border
+      - CornerRadius=5
   - target: ListView#MediaButtonsListView
     styles:
       - RenderTransform:=<ScaleTransform ScaleX="0.9" ScaleY="0.9" />
       - RenderTransformOrigin=0.5,0.5
-      - Margin=0,-30,0,0
+      - Margin=0,-40,0,0
       - HorizontalAlignment=2
   - target: Grid#MediaTransportControlsRoot
     styles:
       - Background:=Transparent
   - target: Windows.UI.Xaml.Controls.Grid#FooterGrid
     styles:
-      - BorderThickness=0
+      - BorderThickness=0,1,0,0
+      - BorderBrush:=$border
   - target: ContentPresenter > Windows.UI.Xaml.Controls.Border
     styles:
-      - BorderThickness=0
+      - BorderBrush:=$border
   - target: ActionCenter.FocusSessionControl
     styles:
       - Height=0
@@ -130,18 +136,25 @@ controlStyles:
     styles:
       - BorderThickness=1
       - BorderBrush:=$border
+  - target: Windows.UI.Xaml.Controls.Primitives.ToggleButton#DoNotDisturbButton
+    styles:
+      - BorderThickness=1
+      - BorderBrush:=$border
   - target: ControlCenter.PaginatedToggleButton#SplitL2Button > ContentPresenter#ContentPresenter
     styles:
-      - BorderThickness=1,0,0,0
+      - BorderThickness=0,1,1,1
       - BorderBrush:=$border
   - target: Windows.UI.Xaml.Controls.ContentControl#TogglesGroup > Windows.UI.Xaml.Controls.ContentPresenter > ControlCenter.PaginatedGridView > Windows.UI.Xaml.Controls.Grid
     styles:
       - CornerRadius=$r
       - BorderThickness=0
-  - target: Windows.UI.Xaml.Controls.ScrollViewer#PipsPagerScrollViewer
+  - target: Microsoft.UI.Xaml.Controls.ItemsRepeater > Windows.UI.Xaml.Controls.Button
     styles:
       - Visibility=Collapsed
-  - target: Microsoft.UI.Xaml.Controls.ItemsRepeater > Windows.UI.Xaml.Controls.Button
+  - target: Button#NextPageButton
+    styles:
+      - Visibility=Collapsed
+  - target: Button#PreviousPageButton
     styles:
       - Visibility=Collapsed
   - target: ControlCenter.ControlCenterPage
@@ -204,6 +217,10 @@ controlStyles:
   - target: ControlCenter.ControlCenterPage > Grid#RootGrid > Grid#RootContent
     styles:
       - VerticalAlignment=Top
+      - Margin=0,12,0,0
+  - target: ControlCenter.PaginatedGridView > Grid > GridView#RootGridView
+    styles:
+      - Height=270
 styleConstants:
   - bg=<WindhawkBlur BlurAmount="20" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.6" />
   - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
@@ -212,6 +229,3 @@ styleConstants:
   - r=10
 themeResourceVariables:
   - ''
-resourceVariables:
-  - variableKey: ''
-    value: ''

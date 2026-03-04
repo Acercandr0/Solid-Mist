@@ -1,35 +1,23 @@
 theme: ''
 controlStyles:
-  - target: Taskbar.TaskListLabeledButtonPanel#IconPanel > Border
-    styles:
-      - Margin=0
-      - Padding=0
-      - BorderThickness=0
-      - Background:=Transparent
-  - target: Taskbar.TaskListButton#TaskListButton > Taskbar.TaskListLabeledButtonPanel#IconPanel > Border#MultiWindowElement
-    styles:
-      - Visibility=Collapsed
-  - target: Taskbar.TaskListLabeledButtonPanel#IconPanel
-    styles:
-      - Padding=0,0,0,2
-      - Margin=2,0,0,0
   - target: Taskbar.TaskListLabeledButtonPanel@RunningIndicatorStates > Rectangle#RunningIndicator
     styles:
-      - Width@ActiveRunningIndicator=20
+      - Fill@ActiveRunningIndicator:=<SolidColorBrush Color="{ThemeResource SystemAccentColorLight2}" Opacity="1" />
+      - Fill@InactiveRunningIndicator:=<SolidColorBrush Color="{ThemeResource SystemAccentColorLight3}" Opacity="1"/>
+      - Height@InactiveRunningIndicator=2.5
       - Height@ActiveRunningIndicator=2
       - Width@InactiveRunningIndicator=2.5
-      - Margin=0,0,0,1.5
-      - Fill:=<SolidColorBrush Color="{ThemeResource SystemAccentColorLight2}" Opacity="1" />
-      - Fill@InactiveRunningIndicator:=<SolidColorBrush Color="{ThemeResource SystemAccentColorLight3}" Opacity="1"/>
-      - MaxWidth=20
+      - Width@ActiveRunningIndicator=22
+      - Opacity@RequestingAttentionRunningIndicator=0
+      - Margin=0,0,0,-0.5
   - target: Windows.UI.Xaml.Shapes.Rectangle#ProgressBarTrack
     styles:
-      - Fill:=<SolidColorBrush Color="{ThemeResource SystemAccentColor}" Opacity="0.6" />
+      - Fill:=<SolidColorBrush Color="{ThemeResource SystemAccentColor}" Opacity="0.5" />
       - Margin=0
   - target: Microsoft.UI.Xaml.Controls.ProgressBar#ProgressIndicator
     styles:
-      - Width=25
-      - Margin=0,0,0,1.5
+      - MaxWidth=22
+      - Margin=0,0,0,-0.5
       - MinHeight=2
       - BorderThickness=0
   - target: Grid#RootGrid > Taskbar.TaskbarBackground > Grid > Rectangle#BackgroundFill
@@ -38,15 +26,13 @@ controlStyles:
   - target: Image#OverlayIcon
     styles:
       - RenderTransform:=<ScaleTransform ScaleX="0.8" ScaleY="0.8" />
-      - Margin=6,-4,0,0
+      - Margin=12,-1,0,0
       - Canvas.ZIndex=1
-      - RenderTransformOrigin:=0.5,0.5
   - target: Taskbar.Badge#BadgeControl
     styles:
       - RenderTransform:=<ScaleTransform ScaleX="0.8" ScaleY="0.8" />
-      - Margin=6,-4,0,0
+      - Margin=12,-1,0,0
       - Canvas.ZIndex=1
-      - RenderTransformOrigin:=0.5,0.5
   - target: MenuFlyoutPresenter > Border
     styles:
       - Background:=$bg
@@ -71,7 +57,7 @@ controlStyles:
   - target: Grid#ModalRootGrid > Border#BackgroundElement
     styles:
       - Shadow:=
-      - CornerRadius=30
+      - CornerRadius=50
       - BorderBrush:=$border
       - Background:=$bg2
   - target: Windows.UI.Xaml.Controls.Border#HoverFlyoutBackground
@@ -81,9 +67,6 @@ controlStyles:
       - Background:=$bg
       - BorderBrush:=$border
       - CornerRadius=$r
-  - target: Windows.UI.Xaml.Controls.Border#HoverFlyoutBackground > Taskbar.TaskbarBackground#HoverFlyoutBackgroundControl > Windows.UI.Xaml.Controls.Grid > Windows.UI.Xaml.Shapes.Rectangle#BackgroundFill
-    styles:
-      - Fill:=Transparent
   - target: Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter#LayoutRoot
     styles:
       - BorderBrush:=$border
@@ -92,7 +75,7 @@ controlStyles:
       - CornerRadius=$r
   - target: Windows.UI.Xaml.Controls.Border#BackgroundDimmingLayer
     styles:
-      - Background:=$bg2
+      - Background:=$bg
   - target: Border#SnapBarBorder
     styles:
       - Background:=$bg2
@@ -112,18 +95,23 @@ controlStyles:
       - Text=
   - target: WindowsInternal.ComposableShell.Experiences.Switcher.VirtualDesktopBarElement#VirtualDesktopBar > Grid#GridElement > Border#VirtualDesktopBarBackground
     styles:
-      - Visibility=Collapsed
-  - target: Taskbar.TaskListButtonPanel#ExperienceToggleButtonRootPanel > Border#BackgroundElement
-    styles:
-      - Background:=Transparent
-      - BorderThickness=0
+      - Visibility=1
   - target: Grid#ConfirmatorMainGrid
     styles:
-      - Background:=$bgx
+      - Background:=$bg2
       - Shadow:=
       - BorderThickness=1
       - BorderBrush:=$border
       - CornerRadius=22
+  - target: Taskbar.TaskListButtonPanel#ExperienceToggleButtonRootPanel > Border#BackgroundElement
+    styles:
+      - BorderThickness=0
+  - target: Windows.UI.Xaml.Controls.Border#BackgroundElement
+    styles:
+      - BorderThickness=0
+  - target: Windows.UI.Xaml.Controls.Border#BackgroundBorder
+    styles:
+      - BorderThickness=0
   - target: Taskbar.ExperienceToggleButton#LaunchListButton[AutomationProperties.AutomationId=StartButton] > Taskbar.TaskListButtonPanel > Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer#Icon
     styles:
       - Visibility=1
@@ -144,14 +132,14 @@ controlStyles:
     styles:
       - Source=file:///C:/Customization/Icons/Apps/Tidal.png
 styleConstants:
-  - bg=<WindhawkBlur BlurAmount="20" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.6" />
+  - bg=<WindhawkBlur BlurAmount="15" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.5" />
   - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
   - bgx=<WindhawkBlur BlurAmount="7" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
   - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1" Opacity="0.15"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="0.5"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1.0"/></LinearGradientBrush>
-  - StartIcon=<Viewbox Width="20" Height="20" Stretch="Uniform"><PathIcon Data="F1 M 2.4 0 H 12 V 12 H 0 V 2.4 A 2.4 2.4 0 0 1 2.4 0 Z M 13 0 H 22.6 A 2.4 2.4 0 0 1 25 2.4 V 12 H 13 Z M 0 13 H 12 V 25 H 2.4 A 2.4 2.4 0 0 1 0 23.6 V 13 Z M 13 13 H 25 V 22.6 A 2.4 2.4 0 0 1 22.6 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0.1,0.1" EndPoint="0.9,0.9"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0.4"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.8"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
-  - PressedIcon=<Viewbox Width="18.5" Height="18.5" Stretch="Uniform"><PathIcon Data="F1 M 2.4 0 H 12 V 12 H 0 V 2.4 A 2.4 2.4 0 0 1 2.4 0 Z M 13 0 H 22.6 A 2.4 2.4 0 0 1 25 2.4 V 12 H 13 Z M 0 13 H 12 V 25 H 2.4 A 2.4 2.4 0 0 1 0 22.6 V 13 Z M 13 13 H 25 V 22.6 A 2.4 2.4 0 0 1 22.6 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="1,1" EndPoint="0,0"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
-  - StartOpen=<Viewbox Width="20" Height="20" Stretch="Uniform"><PathIcon Data="F1 M 2.4 0 H 12 V 12 H 0 V 2.4 A 2.4 2.4 0 0 1 2.4 0 Z M 13 0 H 22.6 A 2.4 2.4 0 0 1 25 2.4 V 12 H 13 Z M 0 13 H 12 V 25 H 2.4 A 2.4 2.4 0 0 1 0 22.6 V 13 Z M 13 13 H 25 V 22.6 A 2.4 2.4 0 0 1 22.6 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="1,1" EndPoint="0,0"><GradientStop Color="{ThemeResource SystemAccentColor}" Offset="0"/><GradientStop Color="{ThemeResource SystemAccentColorLight2}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
-  - PressedIcon2=<Viewbox Width="18.5" Height="18.5" Stretch="Uniform"><PathIcon Data="F1 M 2.4 0 H 12 V 12 H 0 V 2.4 A 2.4 2.4 0 0 1 2.4 0 Z M 13 0 H 22.6 A 2.4 2.4 0 0 1 25 2.4 V 12 H 13 Z M 0 13 H 12 V 25 H 2.4 A 2.4 2.4 0 0 1 0 22.6 V 13 Z M 13 13 H 25 V 22.6 A 2.4 2.4 0 0 1 22.6 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="1,1" EndPoint="0,0"><GradientStop Color="{ThemeResource SystemAccentColor}" Offset="0"/><GradientStop Color="{ThemeResource SystemAccentColorLight2}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
+  - StartIcon=<Viewbox Width="20" Height="20" Stretch="Uniform"><PathIcon Data="F1 M 1.8 0 H 12 V 12 H 0 V 1.8 A 1.8 1.8 0 0 1 1.8 0 Z M 13 0 H 23.2 A 1.8 1.8 0 0 1 25 1.8 V 12 H 13 Z M 0 13 H 12 V 25 H 1.8 A 1.8 1.8 0 0 1 0 23.2 V 13 Z M 13 13 H 25 V 23.2 A 1.8 1.8 0 0 1 23.2 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0.1,0.1" EndPoint="0.9,0.9"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0.4"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.8"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
+  - PressedIcon=<Viewbox Width="18.5" Height="18.5" Stretch="Uniform"><PathIcon Data="F1 M 1.8 0 H 12 V 12 H 0 V 1.8 A 1.8 1.8 0 0 1 1.8 0 Z M 13 0 H 23.2 A 1.8 1.8 0 0 1 25 1.8 V 12 H 13 Z M 0 13 H 12 V 25 H 1.8 A 1.8 1.8 0 0 1 0 23.2 V 13 Z M 13 13 H 25 V 23.2 A 1.8 1.8 0 0 1 23.2 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="1,1" EndPoint="0,0"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
+  - StartOpen=<Viewbox Width="20" Height="20" Stretch="Uniform"><PathIcon Data="F1 M 1.8 0 H 12 V 12 H 0 V 1.8 A 1.8 1.8 0 0 1 1.8 0 Z M 13 0 H 23.2 A 1.8 1.8 0 0 1 25 1.8 V 12 H 13 Z M 0 13 H 12 V 25 H 1.8 A 1.8 1.8 0 0 1 0 23.2 V 13 Z M 13 13 H 25 V 23.2 A 1.8 1.8 0 0 1 23.2 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="1,1" EndPoint="0,0"><GradientStop Color="{ThemeResource SystemAccentColor}" Offset="0"/><GradientStop Color="{ThemeResource SystemAccentColorLight3}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
+  - PressedIcon2=<Viewbox Width="18.5" Height="18.5" Stretch="Uniform"><PathIcon Data="F1 M 1.8 0 H 12 V 12 H 0 V 1.8 A 1.8 1.8 0 0 1 1.8 0 Z M 13 0 H 23.2 A 1.8 1.8 0 0 1 25 1.8 V 12 H 13 Z M 0 13 H 12 V 25 H 1.8 A 1.8 1.8 0 0 1 0 23.2 V 13 Z M 13 13 H 25 V 23.2 A 1.8 1.8 0 0 1 23.2 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="1,1" EndPoint="0,0"><GradientStop Color="{ThemeResource SystemAccentColor}" Offset="0"/><GradientStop Color="{ThemeResource SystemAccentColorLight3}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
   - r=10
 resourceVariables:
   - variableKey: ''

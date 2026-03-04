@@ -20,7 +20,13 @@ controlStyles:
       - RenderTransform:=<RotateTransform Angle="180" />
   - target: Windows.UI.Xaml.Controls.Grid#FrameRoot
     styles:
-      - MaxHeight=565
+      - MaxHeight=570
+  - target: Border#AppBorder
+    styles:
+      - Background:=$bg
+      - BorderThickness=1
+      - BorderBrush:=$border
+      - CornerRadius=$r
   - target: Border#RightCompanionDropShadow
     styles:
       - Visibility=Collapsed
@@ -32,12 +38,6 @@ controlStyles:
   - target: MenuFlyoutPresenter > Border
     styles:
       - Background:=$bg2
-      - BorderThickness=1
-      - BorderBrush:=$border
-      - CornerRadius=$r
-  - target: Border#AppBorder
-    styles:
-      - Background:=$bg
       - BorderThickness=1
       - BorderBrush:=$border
       - CornerRadius=$r
@@ -58,12 +58,15 @@ controlStyles:
       - Height=55
   - target: StartDocked.NavigationPaneButton#UserTileButton
     styles:
-      - CornerRadius=20,10,10,20
+      - CornerRadius=$r
   - target: StartDocked.NavigationPaneButton#PowerButton > Grid@CommonStates > Border#BackgroundBorder
     styles:
-      - CornerRadius=30
+      - CornerRadius=$r
       - BorderBrush:=$border
       - BorderThickness=1
+  - target: Windows.UI.Xaml.Controls.Border#BackgroundBorder
+    styles:
+      - CornerRadius=$r
   - target: Button#ShowAllAppsButton
     styles:
       - Background:=Transparent

@@ -1,4 +1,5 @@
 notificationIconWidth: 30
 notificationIconRows: 1
+gridArrangement: rowFirstLeftToRight
 overflowIconWidth: 30
 overflowIconsPerRow: 1

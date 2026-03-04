@@ -25,9 +25,9 @@ MediaPlayer:
   MaxLength: 28
   NoMediaText: No media
   RemoveBrackets: 0
-WebContentWeatherLocation: ''
+WebContentWeatherLocation: Bogotá
 WebContentWeatherFormat: '%c %t'
-WebContentWeatherUnits: autoDetect
+WebContentWeatherUnits: metric
 WebContentsItems:
   - Url: ''
     BlockStart: ''
@@ -44,9 +44,9 @@ TimeZones:
 TimeStyle:
   Hidden: 0
   TextColor: ''
-  TextAlignment: ''
+  TextAlignment: Center
   FontSize: 0
-  FontFamily: ''
+  FontFamily: Segoe UI Variable Text, Segoe Fluent Icons
   FontWeight: ''
   FontStyle: ''
   FontStretch: ''
@@ -56,7 +56,7 @@ DateStyle:
   TextColor: ''
   TextAlignment: ''
   FontSize: 0
-  FontFamily: ''
+  FontFamily: Segoe Fluent Icons
   FontWeight: ''
   FontStyle: ''
   FontStretch: ''
