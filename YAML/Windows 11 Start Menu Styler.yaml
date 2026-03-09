@@ -20,7 +20,7 @@ controlStyles:
       - RenderTransform:=<RotateTransform Angle="180" />
   - target: Windows.UI.Xaml.Controls.Grid#FrameRoot
     styles:
-      - MaxHeight=570
+      - MaxHeight=470
   - target: Border#AppBorder
     styles:
       - Background:=$bg
@@ -29,7 +29,7 @@ controlStyles:
       - CornerRadius=$r
   - target: Border#RightCompanionDropShadow
     styles:
-      - Visibility=Collapsed
+      - Visibility=1
   - target: MenuFlyoutPresenter
     styles:
       - Shadow:=
@@ -47,23 +47,6 @@ controlStyles:
   - target: Border#AccentAppBorder
     styles:
       - Visibility=Collapsed
-  - target: StartDocked.AppListView#NavigationPanePlacesListView > Windows.UI.Xaml.Controls.Border
-    styles:
-      - Margin=0,0,10,0
-  - target: Grid#UserTileIcon
-    styles:
-      - Margin=-9,0,0,0
-  - target: Windows.UI.Xaml.Controls.Grid#NavPanePlaceholder
-    styles:
-      - Height=55
-  - target: StartDocked.NavigationPaneButton#UserTileButton
-    styles:
-      - CornerRadius=$r
-  - target: StartDocked.NavigationPaneButton#PowerButton > Grid@CommonStates > Border#BackgroundBorder
-    styles:
-      - CornerRadius=$r
-      - BorderBrush:=$border
-      - BorderThickness=1
   - target: Windows.UI.Xaml.Controls.Border#BackgroundBorder
     styles:
       - CornerRadius=$r
@@ -116,21 +99,33 @@ controlStyles:
       - Background:=Transparent
       - BorderBrush:=$border
       - BorderThickness=1
+  - target: ContentPresenter > Grid#TopLevelHeader > Grid > TextBlock#PinnedListHeaderText
+    styles:
+      - Visibility=1
+  - target: Grid#TopLevelHeader > Grid > Button > Grid
+    styles:
+      - Visibility=1
+  - target: Windows.UI.Xaml.Controls.Primitives.ToggleButton#ShowHideCompanion
+    styles:
+      - Visibility=0
+  - target: Windows.UI.Xaml.Controls.Button > Windows.UI.Xaml.Controls.ContentPresenter#ContentPresenter
+    styles:
+      - CornerRadius=$r
   - target: Windows.UI.Xaml.Controls.Border#TaskbarSearchBackground
     styles:
       - Background:=Transparent
   - target: FontIcon#SearchGlyph
     styles:
-      - Visibility=Visible
+      - Visibility=0
   - target: Image#SearchIconOff
     styles:
-      - Visibility=Collapsed
+      - Visibility=1
   - target: Image#SearchIconOn
     styles:
       - Visibility=Collapsed
   - target: Windows.UI.Xaml.Controls.FontIcon#SearchBoxOnTaskbarSearchGlyph
     styles:
-      - Visibility=Visible
+      - Visibility=0
   - target: Microsoft.UI.Xaml.Controls.AnimatedIcon#SearchIconPlayer
     styles:
       - Visibility=Collapsed
@@ -143,7 +138,7 @@ controlStyles:
       - HorizontalAlignment=Center
   - target: StackPanel#TimePanel > TextBlock#Time
     styles:
-      - Foreground:=<WindhawkBlur BlurAmount="50" TintColor="{ThemeResource SystemBaseHighColor}" TintOpacity="0.5" />
+      - Foreground:=<WindhawkBlur BlurAmount="20" TintColor="{ThemeResource SystemBaseHighColor}" TintOpacity="0.3" />
       - FontFamily=Bahnschrift
       - RenderTransform:=<ScaleTransform ScaleX="5" ScaleY="5" />
       - RenderTransformOrigin=0.5,0.5

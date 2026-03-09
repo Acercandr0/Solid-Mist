@@ -2,8 +2,7 @@
 Windhawk theme and some tweaks for Windows 11 25H2.
 
 ![desktop](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/desktop.png)
-![start1](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/start1.png)
-![start2](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/start2.png)
+![start1](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/start.png)
 ![lockscreen](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/lockscreen.png)
 ![explorer](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/explorer.png)
 ![explorer+](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/explorer+.png)

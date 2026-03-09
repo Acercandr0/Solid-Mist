@@ -121,8 +121,7 @@ controlStyles:
       - Background:=Transparent
   - target: Windows.UI.Xaml.Controls.Grid#FooterGrid
     styles:
-      - BorderThickness=0,1,0,0
-      - BorderBrush:=$border
+      - BorderThickness=0
   - target: ContentPresenter > Windows.UI.Xaml.Controls.Border
     styles:
       - BorderBrush:=$border
@@ -167,6 +166,21 @@ controlStyles:
       - RenderTransform:=<RotateTransform Angle="180" />
       - RenderTransformOrigin=0.5,0.5
       - VerticalAlignment=Stretch
+  - target: Grid#L1Grid > Border
+    styles:
+      - Margin=6,0,6,0
+      - CornerRadius=$r
+      - BorderBrush:=$border
+      - Background:=<SolidColorBrush Color="{ThemeResource SystemChromeLowColor}" Opacity="0.2" />
+      - BorderThickness=1
+      - Height=120
+      - VerticalAlignment=Bottom
+  - target: TextBlock[Text=]
+    styles:
+      - Visibility=1
+  - target: TextBlock[Text=]
+    styles:
+      - Text=
   - target: Windows.UI.Xaml.Shapes.Rectangle#HorizontalTrackRect
     styles:
       - Margin=0,-10,10,-10
@@ -208,6 +222,7 @@ controlStyles:
       - Background:=$bg2
       - BorderBrush:=$border
       - BorderThickness=1
+      - Shadow:=
   - target: Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter
     styles:
       - BorderThickness=1
@@ -220,7 +235,7 @@ controlStyles:
       - Margin=0,12,0,0
   - target: ControlCenter.PaginatedGridView > Grid > GridView#RootGridView
     styles:
-      - Height=270
+      - Height=280
 styleConstants:
   - bg=<WindhawkBlur BlurAmount="20" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.6" />
   - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
