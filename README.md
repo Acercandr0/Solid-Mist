@@ -1,7 +1,7 @@
 # Solid Mist 🪟
 Windhawk theme and some tweaks for Windows 11 25H2.
 
-> [!CAUTION]
+> [!WARNING]
 > Since the "Windows 11 Insider Preview 10.0.26120.4250 (ge_release_upr)" update, the custom start menu button constantly disappears. The only way to reactivate it is to toggle the "Taskbar ContentPresenter Injector" mod off and on again.
 
 ![desktop](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/desktop.png)
