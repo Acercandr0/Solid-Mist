@@ -1,9 +1,6 @@
 # Solid Mist 🪟
 Windhawk theme and some tweaks for Windows 11 25H2.
 
-> [!WARNING]
-> Since the "Windows 11 Insider Preview 10.0.26120.4250 (ge_release_upr)" update, the custom start menu button constantly disappears. The only way to reactivate it is to toggle the "Taskbar ContentPresenter Injector" mod off and on again.
-
 ![desktop](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/desktop.png)
 ![start1](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/start.png)
 ![lockscreen](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/lockscreen.png)
@@ -60,6 +57,10 @@ No config, use Settings tab.
 
 ### 11. Taskbar ContentPresenter Injector
 No config, just install.
+
+> [!NOTE]
+> Since "Windows 11 Insider Preview 10.0.26120.4250" update, the custom start menu button constantly disappears. If your start button doesn't show up, compile my custom version of the mod instead of installing the official one: copy the contents of [`Start Button Fix/Taskbar ContentPresenter Injector.cpp`](./Start%20Button%20Fix/Taskbar%20ContentPresenter%20Injector.cpp), open Windhawk, click **Create New Mod**, paste the code there, and compile.
+
 
 ### 🖱️ Cursor (I use the black + outline version)
 [Minimalistic V3 cursor](https://www.deviantart.com/skyeo84/art/Minimalistic-V3-cursor-909469275)

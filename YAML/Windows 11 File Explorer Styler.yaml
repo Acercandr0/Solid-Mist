@@ -1,6 +1,8 @@
 theme: ''
 backgroundTranslucentEffect: ''
-backgroundTranslucentEffectRegion: ''
+backgroundTranslucentEffectRegion: entireWindow
+styleConstants:
+  - ''
 controlStyles:
   - target: AppBarSeparator
     styles:
@@ -46,8 +48,6 @@ controlStyles:
   - target: TabViewItem > Grid#LayoutRoot > Canvas > Microsoft.UI.Xaml.Shapes.Path#SelectedBackgroundPath
     styles:
       - Fill:=Transparent
-styleConstants:
-  - ''
 themeResourceVariables:
   - ''
 explorerFrameContainerHeight: 0

@@ -1,9 +1,9 @@
 ShowSeconds: 0
 TimeFormat: h':'mm tt
-DateFormat: ddddd',' MMMM d
+DateFormat: dddd',' MMMM d
 WeekdayFormat: dddd
 WeekdayFormatCustom: ''
-TopLine: '%date%    %time%'
+TopLine: '%date%   %time%'
 BottomLine: ''
 MiddleLine: ''
 TooltipLine: ''
