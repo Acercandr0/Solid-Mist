@@ -2,11 +2,12 @@
 Windhawk theme and some tweaks for Windows 11 25H2.
 
 ![desktop](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/desktop.png)
-![start1](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/start.png)
+![start](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/start.png)
 ![lockscreen](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/lockscreen.png)
 ![explorer](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/explorer.png)
 ![explorer+](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/explorer+.png)
-![ctrl+tab](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/ctrl+tab.png)
+![alt+tab](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/alt+tab.png)
+![win+tab](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/win+tab.png)
 ![osd](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/osd.png)
 ![input](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Previews/input.png)
 
@@ -58,7 +59,7 @@ No config, use Settings tab.
 ### 11. Taskbar ContentPresenter Injector
 No config, just install.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Since "Windows 11 Insider Preview 10.0.26120.4250" update, the custom start menu button constantly disappears. If your start button doesn't show up, compile my custom version of the mod instead of installing the official one: copy the contents of [`Start Button Fix/Taskbar ContentPresenter Injector.cpp`](./Start%20Button%20Fix/Taskbar%20ContentPresenter%20Injector.cpp), open Windhawk, click **Create New Mod**, paste the code there, and compile.
 
 
