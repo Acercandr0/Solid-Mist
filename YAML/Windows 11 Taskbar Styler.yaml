@@ -112,6 +112,21 @@ controlStyles:
   - target: Taskbar.TaskListButton#TaskListButton > Taskbar.TaskListLabeledButtonPanel#IconPanel > Border#BackgroundElement
     styles:
       - BorderThickness=0
+  - target: SystemTray.OmniButton#ControlCenterButton > Grid > Border#BackgroundBorder
+    styles:
+      - BorderThickness=0
+  - target: SystemTray.OmniButton#ControlCenterButton > Grid > Border#BackgroundBorder
+    styles:
+      - BorderThickness=0
+  - target: SystemTray.ChevronIconView > Grid#ContainerGrid > Border#BackgroundBorder
+    styles:
+      - BorderThickness=0
+  - target: SystemTray.OmniButton#ControlCenterButton
+    styles:
+      - BorderThickness=0
+  - target: SystemTray.OmniButton#NotificationCenterButton
+    styles:
+      - BorderThickness=0
   - target: Taskbar.ExperienceToggleButton#LaunchListButton[AutomationProperties.AutomationId=StartButton] > Taskbar.TaskListButtonPanel > Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer#Icon
     styles:
       - Visibility=1
