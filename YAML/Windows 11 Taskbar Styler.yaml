@@ -50,7 +50,7 @@ controlStyles:
       - CornerRadius=$r
   - target: Border#OverflowFlyoutBackgroundBorder
     styles:
-      - Background:=$bg
+      - Background:=$bgx
       - Shadow:=
       - BorderThickness=1
       - BorderBrush:=$border
@@ -60,14 +60,16 @@ controlStyles:
       - Shadow:=
       - CornerRadius=50
       - BorderBrush:=$border
-      - Background:=$bg2
+      - Background:=$bg
   - target: Windows.UI.Xaml.Controls.Border#HoverFlyoutBackground
     styles:
       - Shadow:=
       - BorderThickness=1
-      - Background:=$bg
       - BorderBrush:=$border
       - CornerRadius=$r
+  - target: Windows.UI.Xaml.Controls.Border#HoverFlyoutBackground > Taskbar.TaskbarBackground#HoverFlyoutBackgroundControl > Windows.UI.Xaml.Controls.Grid > Windows.UI.Xaml.Shapes.Rectangle#BackgroundFill
+    styles:
+      - Fill:=$bg
   - target: Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter#LayoutRoot
     styles:
       - BorderBrush:=$border
@@ -107,10 +109,7 @@ controlStyles:
   - target: Taskbar.TaskListButtonPanel#ExperienceToggleButtonRootPanel > Border#BackgroundElement
     styles:
       - BorderThickness=0
-  - target: Windows.UI.Xaml.Controls.Border#BackgroundElement
-    styles:
-      - BorderThickness=0
-  - target: Windows.UI.Xaml.Controls.Border#BackgroundBorder
+  - target: Taskbar.TaskListButton#TaskListButton > Taskbar.TaskListLabeledButtonPanel#IconPanel > Border#BackgroundElement
     styles:
       - BorderThickness=0
   - target: Taskbar.ExperienceToggleButton#LaunchListButton[AutomationProperties.AutomationId=StartButton] > Taskbar.TaskListButtonPanel > Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer#Icon
@@ -118,20 +117,24 @@ controlStyles:
       - Visibility=1
   - target: Taskbar.ExperienceToggleButton#LaunchListButton[AutomationProperties.AutomationId=StartButton] > Taskbar.TaskListButtonPanel@CommonStates > Windows.UI.Xaml.Controls.ContentPresenter#CustomInjectedPresenter
     styles:
-      - Content@InactivePointerOver:=$StartIcon
+      - Content@InactivePointerOver:=$PressedIcon
       - Content@ActivePressed:=$PressedIcon
-      - Content@ActivePointerOver:=$StartIcon
+      - Content@ActivePointerOver:=$PressedIcon
       - Content@InactivePressed:=$PressedIcon
       - Content@InactiveNormal:=$StartIcon
-      - Content@ActiveNormal:=$StartIcon
-      - Margin=0,1,0,0
+      - Content@ActiveNormal:=$PressedIcon
+      - ContentTransitions@ActiveNormal:=<TransitionCollection><EntranceThemeTransition FromHorizontalOffset="0" FromVerticalOffset="-5" IsStaggeringEnabled="False" /></TransitionCollection>
+      - Margin=7
+  - target: 'Taskbar.TaskListButton[AutomationProperties.AutomationId=Appid: com.squirrel.TIDAL.TIDAL] > Taskbar.TaskListLabeledButtonPanel#IconPanel > Windows.UI.Xaml.Controls.Image#Icon'
+    styles:
+      - Source=file:///C:/Customization/Icons/Apps/Tidal.png
 styleConstants:
   - bg=<WindhawkBlur BlurAmount="15" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.5" />
   - bg2=<WindhawkBlur BlurAmount="7" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.5" />
   - bgx=<WindhawkBlur BlurAmount="7" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
   - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1" Opacity="0.15"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="0.5"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1.0"/></LinearGradientBrush>
-  - StartIcon=<Viewbox Width="20" Height="20" Stretch="Uniform"><PathIcon Data="F1 M 1.8 0 H 12 V 12 H 0 V 1.8 A 1.8 1.8 0 0 1 1.8 0 Z M 13 0 H 23.2 A 1.8 1.8 0 0 1 25 1.8 V 12 H 13 Z M 0 13 H 12 V 25 H 1.8 A 1.8 1.8 0 0 1 0 23.2 V 13 Z M 13 13 H 25 V 23.2 A 1.8 1.8 0 0 1 23.2 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="1,1" EndPoint="0,0"><GradientStop Color="{ThemeResource SystemAccentColor}" Offset="0"/><GradientStop Color="{ThemeResource SystemAccentColorLight3}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
-  - PressedIcon=<Viewbox Width="18" Height="18" Stretch="Uniform"><PathIcon Data="F1 M 1.8 0 H 12 V 12 H 0 V 1.8 A 1.8 1.8 0 0 1 1.8 0 Z M 13 0 H 23.2 A 1.8 1.8 0 0 1 25 1.8 V 12 H 13 Z M 0 13 H 12 V 25 H 1.8 A 1.8 1.8 0 0 1 0 23.2 V 13 Z M 13 13 H 25 V 23.2 A 1.8 1.8 0 0 1 23.2 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0.1,0.1" EndPoint="0.9,0.9"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0.4"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.8"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
+  - StartIcon=<Viewbox Stretch="Uniform"><PathIcon Data="F1 M 1.8 0 H 12 V 12 H 0 V 1.8 A 1.8 1.8 0 0 1 1.8 0 Z M 13 0 H 23.2 A 1.8 1.8 0 0 1 25 1.8 V 12 H 13 Z M 0 13 H 12 V 25 H 1.8 A 1.8 1.8 0 0 1 0 23.2 V 13 Z M 13 13 H 25 V 23.2 A 1.8 1.8 0 0 1 23.2 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="0.1,0.1" EndPoint="0.9,0.9"><GradientStop Color="{ThemeResource TextFillColorPrimary}" Offset="0.4"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.8"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
+  - PressedIcon=<Viewbox Stretch="Uniform"><PathIcon Data="F1 M 1.8 0 H 12 V 12 H 0 V 1.8 A 1.8 1.8 0 0 1 1.8 0 Z M 13 0 H 23.2 A 1.8 1.8 0 0 1 25 1.8 V 12 H 13 Z M 0 13 H 12 V 25 H 1.8 A 1.8 1.8 0 0 1 0 23.2 V 13 Z M 13 13 H 25 V 23.2 A 1.8 1.8 0 0 1 23.2 25 H 13 Z"><PathIcon.Foreground><LinearGradientBrush StartPoint="1,1" EndPoint="0,0"><GradientStop Color="{ThemeResource SystemAccentColor}" Offset="0"/><GradientStop Color="{ThemeResource SystemAccentColorLight3}" Offset="1"/></LinearGradientBrush></PathIcon.Foreground></PathIcon></Viewbox>
   - r=10
 resourceVariables:
   - variableKey: ''
