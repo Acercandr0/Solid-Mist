@@ -59,10 +59,6 @@ No config, use Settings tab.
 ### 11. Taskbar ContentPresenter Injector
 No config, just install.
 
-> [!IMPORTANT]
-> Since "Windows 11 Insider Preview 10.0.26120.4250" update, the custom start menu button constantly disappears. If your start button doesn't show up, compile my custom version of the mod instead of installing the official one: copy the contents of [`Start Button Fix/Taskbar ContentPresenter Injector.cpp`](./Start%20Button%20Fix/Taskbar%20ContentPresenter%20Injector.cpp), open Windhawk, click **Create New Mod**, paste the code there, and compile.
-
-
 ### 🖱️ Cursor (I use the black + outline version)
 [Minimalistic V3 cursor](https://www.deviantart.com/skyeo84/art/Minimalistic-V3-cursor-909469275)
 
