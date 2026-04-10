@@ -23,6 +23,7 @@ Open **PowerShell** as Administrator and paste the following command:
 
 ```powershell
 powershell -c "irm [https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Install-SolidMist.ps1](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Install-SolidMist.ps1) | iex"
+```
 
 [!CAUTION]
 PLEASE NOTE: This script will overwrite the settings for the specific mods listed below. If you have customized these mods previously and wish to keep your changes, please backup your configuration files before proceeding.
