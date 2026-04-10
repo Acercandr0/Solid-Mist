@@ -1,0 +1,203 @@
+theme: ''
+disableNewStartMenuLayout: '0'
+styleConstants:
+  - bg=<WindhawkBlur BlurAmount="20" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.5" />
+  - bg2=<WindhawkBlur BlurAmount="10" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
+  - bg3=<WindhawkBlur BlurAmount="15" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.3" />
+  - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1" Opacity="0.15"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="0.5"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1.0"/></LinearGradientBrush>
+  - r=10
+  - r2=7
+controlStyles:
+  - target: Border#AcrylicOverlay
+    styles:
+      - Background:=Transparent
+      - BorderThickness=0,0,0,1
+      - BorderBrush:=$border
+  - target: Grid#UnderlineContainer
+    styles:
+      - Visibility=1
+  - target: Windows.UI.Xaml.Controls.Border#StartDropShadow
+    styles:
+      - Visibility=1
+  - target: StartMenu.StartBlendedFlexFrame
+    styles:
+      - RenderTransform:=<RotateTransform Angle="180" />
+  - target: StartMenu.StartBlendedFlexFrame > Grid
+    styles:
+      - RenderTransform:=<RotateTransform Angle="180" />
+  - target: Grid#FrameRoot
+    styles:
+      - MaxHeight=580
+  - target: Border#AppBorder
+    styles:
+      - Background:=$bg
+      - BorderThickness=1
+      - BorderBrush:=$border
+      - CornerRadius=$r
+  - target: Border#RightCompanionDropShadow
+    styles:
+      - Visibility=1
+  - target: MenuFlyoutPresenter
+    styles:
+      - Shadow:=
+      - BorderThickness=1
+      - BorderBrush:=$border
+  - target: MenuFlyoutPresenter > Border
+    styles:
+      - Background:=$bg2
+      - BorderThickness=1
+      - BorderBrush:=$border
+      - CornerRadius=$r
+  - target: Border#dropshadow
+    styles:
+      - Visibility=1
+  - target: Border#AccentAppBorder
+    styles:
+      - Visibility=1
+  - target: Windows.UI.Xaml.Controls.Border#BackgroundBorder
+    styles:
+      - CornerRadius=$r
+  - target: Button#ShowAllAppsButton
+    styles:
+      - Background:=Transparent
+      - BorderBrush:=$border
+      - CornerRadius=$r
+  - target: Button#PrimaryActionBarButton
+    styles:
+      - Background:=Transparent
+      - CornerRadius=$r
+  - target: Button#ActionBarOverflowButton
+    styles:
+      - Background:=Transparent
+      - CornerRadius=$r
+  - target: Button#CloseAllAppsButton
+    styles:
+      - Background:=Transparent
+      - BorderBrush:=$border
+      - CornerRadius=$r
+  - target: Border#AcrylicBorder
+    styles:
+      - Background:=$bg
+      - BorderBrush:=$border
+      - BorderThickness=1
+      - CornerRadius=$r
+  - target: Windows.UI.Xaml.Controls.ToolTip > Windows.UI.Xaml.Controls.ContentPresenter#LayoutRoot
+    styles:
+      - BorderBrush:=$border
+      - Shadow:=
+      - Background:=$bg3
+      - BorderThickness=1
+      - CornerRadius=$r2
+  - target: StartMenu.CategoryControl > Grid#RootGrid > Border
+    styles:
+      - BorderBrush:=$border
+      - Background:=Transparent
+      - BorderThickness=0.5
+      - CornerRadius=$r
+  - target: StartMenu.FolderModal#StartFolderModal > Grid#Root > Border
+    styles:
+      - Background:=$bg3
+      - BorderBrush:=$border
+      - Shadow:=
+      - BorderThickness=1
+      - CornerRadius=$r
+  - target: StartMenu.SearchBoxToggleButton#SearchBoxToggleButton > Windows.UI.Xaml.Controls.Grid > Windows.UI.Xaml.Controls.Border#BorderElement
+    styles:
+      - Background:=Transparent
+      - BorderBrush:=$border
+      - BorderThickness=1
+  - target: ContentPresenter > Grid#TopLevelHeader > Grid > TextBlock#PinnedListHeaderText
+    styles:
+      - Visibility=1
+  - target: Grid#TopLevelHeader > Grid > Button > Grid
+    styles:
+      - Visibility=1
+  - target: Windows.UI.Xaml.Controls.Primitives.ToggleButton#ShowHideCompanion > Border > ContentPresenter#ContentPresenter > FontIcon
+    styles:
+      - Foreground:=<SolidColorBrush Color="{ThemeResource SystemAccentColorLight3}" Opacity="1" />
+  - target: StartDocked.NavigationPaneButton#PowerButton > Grid > ContentPresenter#ContentPresenter > Grid > FontIcon
+    styles:
+      - Foreground:=<SolidColorBrush Color="{ThemeResource SystemAccentColorLight3}" Opacity="1" />
+  - target: Windows.UI.Xaml.Controls.Button > Windows.UI.Xaml.Controls.ContentPresenter#ContentPresenter
+    styles:
+      - CornerRadius=$r
+  - target: Windows.UI.Xaml.Controls.Border#TaskbarSearchBackground
+    styles:
+      - Background:=Transparent
+  - target: FontIcon#SearchGlyph
+    styles:
+      - Visibility=0
+  - target: Image#SearchIconOff
+    styles:
+      - Visibility=1
+  - target: Image#SearchIconOn
+    styles:
+      - Visibility=1
+  - target: Windows.UI.Xaml.Controls.FontIcon#SearchBoxOnTaskbarSearchGlyph
+    styles:
+      - Visibility=0
+  - target: Microsoft.UI.Xaml.Controls.AnimatedIcon#SearchIconPlayer
+    styles:
+      - Visibility=1
+  - target: Border#LayerBorder
+    styles:
+      - Visibility=1
+  - target: StackPanel#TimeAndDatePanel
+    styles:
+      - VerticalAlignment=Center
+      - HorizontalAlignment=Center
+  - target: StackPanel#TimePanel
+    styles:
+      - Background=Transparent
+  - target: StackPanel#TimePanel > TextBlock#Time
+    styles:
+      - Foreground:=<WindhawkBlur BlurAmount="20" TintColor="{ThemeResource SystemBaseHighColor}" TintOpacity="0.5" />
+      - FontFamily=Bahnschrift
+      - FontSize=450
+      - FontWeight=Bold
+  - target: StackPanel#TimeAndDatePanel > TextBlock#Date
+    styles:
+      - FontWeight=Light
+      - FontSize=30
+      - Margin=0,-160,0,0
+  - target: Grid#MediaControlsContainer
+    styles:
+      - Margin=0,0,0,70
+  - target: Grid#MediaTransportControls
+    styles:
+      - Background:=$bg2
+      - BorderThickness=1
+      - BorderBrush=#20FFFFFF
+      - CornerRadius=$r
+      - Padding=5
+      - Width=310
+      - Height=80
+      - Margin=0,-130,0,0
+  - target: Grid#ThumbnailImageArea
+    styles:
+      - RenderTransformOrigin=0.5,0.5
+      - RenderTransform:=<ScaleTransform ScaleX="1.3" ScaleY="1.3" />
+      - Margin=10,0,18,0
+  - target: Button#Videos_Preview_LockScreen_LockScreen
+    styles:
+      - Visibility=1
+  - target: Button#Weather_Preview_LockScreen_LockScreen
+    styles:
+      - Visibility=1
+  - target: Grid#NetworkAndBatteryIcon
+    styles:
+      - HorizontalAlignment=Center
+  - target: UserControl > Grid#NetworkAndBatteryIcon > Border#BackplateBorder
+    styles:
+      - Background:=$bg2
+      - BorderThickness=1
+      - CornerRadius=$r
+      - BorderBrush=#20FFFFFF
+      - Margin=0,0,0,20
+themeResourceVariables:
+  - ''
+webContentStyles:
+  - target: ''
+    styles:
+      - ''
+webContentCustomJs: ''

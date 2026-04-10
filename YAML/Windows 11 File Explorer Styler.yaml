@@ -1,0 +1,77 @@
+theme: ''
+backgroundTranslucentEffect: default
+backgroundTranslucentEffectRegion: entireWindow
+styleConstants:
+  - bg=<WindhawkBlur BlurAmount="15" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity="0.5" />
+  - border=<LinearGradientBrush StartPoint="0,0" EndPoint="0,1" Opacity="0.15"><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="0.0"/><GradientStop Color="{ThemeResource TextFillColorTertiary}" Offset="0.5"/><GradientStop Color="{ThemeResource TextFillColorSecondary}" Offset="1.0"/></LinearGradientBrush>
+  - r=10
+  - r2=7
+controlStyles:
+  - target: AppBarSeparator
+    styles:
+      - Visibility=Collapsed
+  - target: Grid#DetailsViewControlRootGrid
+    styles:
+      - Background:=Transparent
+  - target: StackPanel#DetailsViewThumbnail
+    styles:
+      - Background:=Transparent
+  - target: Grid#CommandBarControlRootGrid
+    styles:
+      - Background:=Transparent
+      - BorderThickness=0
+  - target: FileExplorerExtensions.GalleryViewControl#GalleryViewControl > Grid
+    styles:
+      - Background:=Transparent
+  - target: FileExplorerExtensions.GalleryViewControl#GalleryViewControl > Grid > Grid#GalleryRootGrid
+    styles:
+      - Background:=Transparent
+  - target: Grid#NavigationBarControlGrid
+    styles:
+      - Background:=Transparent
+  - target: CommandBar#FileExplorerCommandBar
+    styles:
+      - Background:=Transparent
+  - target: Border#RightBottomBorderLine
+    styles:
+      - Visibility=Collapsed
+  - target: Border#LeftBottomBorderLine
+    styles:
+      - Visibility=Collapsed
+  - target: Border#BottomBorderLine
+    styles:
+      - Visibility=Collapsed
+  - target: TabViewItem > Grid#LayoutRoot > Grid#TabContainer
+    styles:
+      - BorderBrush:=Transparent
+      - Background:=Transparent
+  - target: Grid#HomeViewRootGrid
+    styles:
+      - Background:=Transparent
+  - target: TabViewItem > Grid#LayoutRoot > Canvas > Microsoft.UI.Xaml.Shapes.Path#SelectedBackgroundPath
+    styles:
+      - Fill:=Transparent
+  - target: TabViewItem > Grid#LayoutRoot
+    styles:
+      - CornerRadius=$r2
+      - Margin=0,0,7,0
+  - target: Button#AddButton
+    styles:
+      - Margin=-7,0,0,0
+  - target: TabViewItem > Grid#LayoutRoot > Canvas
+    styles:
+      - Visibility=Collapsed
+  - target: TabViewItem > Grid#LayoutRoot@CommonStates
+    styles:
+      - Background@Normal:=Transparent
+      - Background@PointerOver:=$border
+      - BorderBrush@Normal:=Transparent
+      - BorderBrush@PointerOver:=Transparent
+      - BorderBrush@Selected:=$border
+      - BorderBrush@PointerOverSelected:=$border
+      - BorderBrush@PressedSelected:=$border
+      - BorderThickness=1
+themeResourceVariables:
+  - ''
+explorerFrameContainerHeight: 0
+xamlDiagnosticsHandling: alert
