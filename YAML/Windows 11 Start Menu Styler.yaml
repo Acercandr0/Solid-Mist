@@ -166,7 +166,7 @@ controlStyles:
   - target: Grid#MediaTransportControls
     styles:
       - Background:=$bg2
-      - BorderThickness=1
+      - BorderThickness=0.5
       - BorderBrush=#20FFFFFF
       - CornerRadius=$r
       - Padding=5
@@ -177,7 +177,7 @@ controlStyles:
     styles:
       - RenderTransformOrigin=0.5,0.5
       - RenderTransform:=<ScaleTransform ScaleX="1.3" ScaleY="1.3" />
-      - Margin=10,0,18,0
+      - Margin=12,0,18,0
   - target: Button#Videos_Preview_LockScreen_LockScreen
     styles:
       - Visibility=1
@@ -190,7 +190,7 @@ controlStyles:
   - target: UserControl > Grid#NetworkAndBatteryIcon > Border#BackplateBorder
     styles:
       - Background:=$bg2
-      - BorderThickness=1
+      - BorderThickness=0.5
       - CornerRadius=$r
       - BorderBrush=#20FFFFFF
       - Margin=0,0,0,20

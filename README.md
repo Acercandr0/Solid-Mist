@@ -11,30 +11,7 @@ Windhawk theme and some tweaks for Windows 11 25H2.
 
 ---
 
-## 🚀 AUTOMATIC INSTALLATION
-The most efficient way to deploy the **Solid Mist** configuration. This method uses a PowerShell script to automate the entire setup process.
-
-### Important Requirements:
-* **Administrator Privileges:** You must run the terminal as an Administrator to allow software installation and file movement.
-* **Standard Version Only:** This script is specifically designed for the **installed version** of Windhawk. It is **not compatible with Windhawk Portable**.
-
-### How to use it:
-Open **PowerShell** as Administrator and paste the following command:
-
-```powershell
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex (Invoke-RestMethod "https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Install-SolidMist.ps1")
-```
-
-> [!CAUTION]
-> **PLEASE NOTE:** This script will overwrite the settings for the specific mods listed below. If you have customized these mods previously and wish to keep your changes, please **backup your configuration files** before proceeding.
->
-
- The script will automatically detect if Windhawk is missing, install it via WinGet, download the latest Solid Mist configuration files, and move them to your system's Profiles folder.
-
----
-
-## 🛠️ MANUAL INSTALLATION
-If you prefer a modular setup or are using the portable version, you can apply the tweaks individually.
+## 🛠️ INSTALLATION
 
 ### 1. Translucent Windows
 [YAML FILE](./YAML/Translucent%20Windows.yaml)
