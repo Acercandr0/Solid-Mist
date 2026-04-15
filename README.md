@@ -22,7 +22,7 @@ The most efficient way to deploy the **Solid Mist** configuration. This method u
 Open **PowerShell** as Administrator and paste the following command:
 
 ```powershell
-powershell -c "irm [https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Install-SolidMist.ps1](https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Install-SolidMist.ps1) | iex"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex (Invoke-RestMethod "https://raw.githubusercontent.com/Acercandr0/Solid-Mist/main/Install-SolidMist.ps1")
 ```
 
 > [!CAUTION]
