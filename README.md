@@ -44,7 +44,7 @@ No config required, just install.
 [YAML FILE](./YAML/Taskbar%20height%20and%20icon%20size.yaml)
 
 ### 10. Customize Windows notifications placement
-No config required; set to "top" on the Settings tab.
+[YAML FILE](./YAML/Customize%20Windows%20notifications%20placement.yaml)
 
 ### 11. Taskbar on top for Windows 11
 No config required; use the Settings tab.

@@ -1,0 +1,7 @@
+monitor: 1
+monitorInterfaceName: ''
+horizontalPlacement: right
+horizontalDistanceFromScreenEdge: 0
+verticalPlacement: top
+verticalDistanceFromScreenEdge: -10
+animationDirection: automatic
